@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                <title>L'Adige (verso Chizzola)</title>
+                <!-- TRASCRITTORE nome e cognome-->
+                <respStmt>
+                    <resp>transcription by</resp>
+                    <name ref="#FS">
+                        <forename>Francesco</forename>
+                        <surname>Spagnoli</surname>
+                    </name>
+                </respStmt>
+                <!-- ENTE DI APPARTENENZA -->
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                   Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
+               Testi 
+                                                                                                                                                                                                                                                <!-- COMPILAZIONE -->
+                    <date>2021</date>
+                </edition>
+                <!-- NOME COMPILATORE -->
+                <respStmt>
+                    <resp>encoding by</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
+                </respStmt>
+                <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <name xml:id="GP">Giacomo Paolicchi</name>
+                    <name xml:id="ES">Enrica Salvatori</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <name xml:id="MR">Marzia Ratti</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Unipi</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability>
+                    <p>Available under licence only</p>
+                </availability>
+                <date when="2019">2019</date>
+                <distributor>LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
+            </publicationStmt>
+            <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
+            <notesStmt xml:id="notesStmt1">
+                <note n="1.1">Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di una fotografia del fiume Adige, scattata nelle vicinanze di Chizzola.
+                I colori sono sbiaditi a causa dell'usura del tempo tuttavia l'immagine risulta ancora nitida e non troppo rovinata.</note>
+                <note n="1.2">Sul retro, che si divide a metà, troviamo nel lato sinistro, in alto a sinistra un numero, il 17, che si sovrappone a un timbro sbiadito, presumibilmente della croce rossa. 
+                Sempre nello stesso lato, è presente una scritta in corsivo in cui si distinguono chiaramente una data e la firma finale. 
+                In basso a sinistra si legge chiaramente la scritta "L'Adige (verso Chizzola). T. Cascella.", luogo in cui è stata scattata la foto. </note>
+                <note n="1.3">Si distinguono, nella parte destra in alto la scritta "Cartolina Postale Commemorativa della IV guerra per l'indipendenza", nonostante la sovrapposizione di due timbri, questi ultimi non del tutto leggibli.
+                 Si notano invece chiaramente il francobollo, a destra, delle poste italiane, il simbolo della Croce Rossa Italiana al centro, e sulla sinistra una dicitura: "edizione della Croce Rossa Italiana a proprio esclusivo beneficio".
+                 Nella parte inferiore si nota l'indirizzo del destinatario</note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
+                        non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
+                        registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
+                    <title xml:id="tit1">L'Adige (verso Chizzola)</title>
+                    <author xml:id="CR">Croce Rossa</author>
+                    <!-- PRODUZIONE Chi ha prodotto / pubblicato la cartolina. Se non presente togliere il tag  -->
+                    <!-- LUOGO -->
+                    <pubPlace>Luogo</pubPlace>
+                    <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
+                    <date when="19150916">16/09/1915</date>
+                </bibl>
+                <msDesc>
+                    <!-- COLLOCAZIONE SPECIFICA -->
+                    <!-- CODICE IDENTIFICATIVO -->
+                    <msIdentifier>
+                        <country>Italia</country>
+                        <settlement>La Spezia (SP)</settlement>
+                        <!-- COLLOCAZIONE SPECIFICA -->
+                        <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <!-- CODICE IDENTIFICATIVO -->
+                        <idno>7694_017_001/002</idno>
+                    </msIdentifier>
+                    <!-- Informazioni sul contenuto della cartolina -->
+                    <!-- DESCRIZIONE -->
+                    <msContents>
+                        <summary>Cartolina Artistica</summary>
+                        <textLang>Italiano</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType>Cartolina</objectType>
+                                    <!-- MATERIALI -->
+                                    <material>Carta</material>
+                                    <!-- DIMENSIONE -->
+                                    <dimensions unit="cm">
+                                        <height>9</height>
+                                        <width>14</width>
+                                    </dimensions>
+                                    <stamp>francobollo - Regno d'Italia</stamp>
+                                </support>                                <!-- CONSERVAZIONE 
+                                buono = non occorrono interventi di restauro;
+                                discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro-->
+                                <condition>Buono</condition>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+                <!-- LUOGHI -->
+                <listPlace>
+                    <place xml:id="CZ">
+                        <placeName>Chizzola</placeName>
+                        <settlement type="località">città</settlement>
+                        <district type="comune">Chizzola</district>
+                        <district type="provincia">TN</district>
+                        <country key="N">IT</country>
+                        <note>Foto scattata nelle vicinanze della città</note>
+                    </place>
+                </listPlace>
+                <listOrg>
+                    <org xml:id="N3">
+                        <orgName type="N"></orgName>
+                        <desc>...</desc>
+                    </org>
+                </listOrg>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <persName ref="#CR" />
+                    <placeName ref="#CZ" />
+                    <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
+                    <date type="postage" when="1916-12-19">1916/12/19</date>
+                    <date type="writing" when="1916-12-19">1916/12/19</date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName>...</persName>
+                    <placeName>...</placeName>
+                </correspAction>
+                <correspContext>
+                    <p>
+                        <!-- previous -->
+                        <!-- forward -->
+                    </p>
+                </correspContext>
+            </correspDesc>
+            <textClass>
+                <keywords scheme="">
+                    <!-- soggettario -->
+                    <!-- tipologia -->
+                    <!-- descrizione -->
+                    <term>Cartolina </term>
+                    <term>Cartolina Artistica </term>
+                    <term>Coppia di innamorati</term>
+                </keywords>
+            </textClass>
+            <langUsage>
+                <language ident="it-IT">italiano</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <!-- DEFINIZIONE -->
+    <text type="cartolina" xml:id="xx">
+        <!-- TRASCRIZIONE -->
+        <body>
+            <div type="fronte">
+                <figure>
+                    <graphic url="nomedamettere/images/nomefile.jpg" />
+                    <figDesc>Descrizione sintetica dell'immagine</figDesc>
+                    <head>ripetere titolo con eventuale autore</head>
+                </figure>
+            </div>
+            <div facs="..." type="retro">
+                <div type="message">
+                    <!-- ... -->
+                    <p>luogo e data</p>
+                    <p>messaggio</p>
+                    <p>>messaggio</p>
+                    <signed>firma</signed>
+                </div>
+                <div type="destination">
+                    <p>
+                        <!-- stamps -->
+                        <stamp type="postmark">
+                            <mentioned>scritture dentro al timbro</mentioned>
+                            <date when="1916-12-19">1916/12/19</date>
+                        </stamp>
+                        <stamp type="postage">francobollo da 5 centesimi del Regno d'Italia</stamp>
+                    </p>
+                    <p>
+                        <address>
+                            <addrLine>Signorina</addrLine>
+                            <addrLine>
+                                <persName ref="#OT">Olivia Turtura </persName>
+                            </addrLine>
+                            <addrLine>Via G. Rossi 53</addrLine>
+                            <addrLine>
+                                <placeName ref="#RV">Ravenna</placeName>
+                            </addrLine>
+                            <addrLine></addrLine>
+                        </address>
+                    </p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
