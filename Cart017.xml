@@ -78,10 +78,8 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">L'Adige (verso Chizzola)</title>
-                    <author xml:id="CR">Croce Rossa</author>
-                    <!-- PRODUZIONE Chi ha prodotto / pubblicato la cartolina. Se non presente togliere il tag  -->
-                    <!-- LUOGO -->
-                    <pubPlace>Luogo</pubPlace>
+                    <author xml:id="TG">Tintura Giuseppe</author>
+                    <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="19150916">16/09/1915</date>
                 </bibl>
@@ -129,29 +127,21 @@
                 <listPlace>
                     <place xml:id="CZ">
                         <placeName>Chizzola</placeName>
-                        <settlement type="località">città</settlement>
-                        <district type="comune">Chizzola</district>
+                        <settlement type="località">Chizzola</settlement>
                         <district type="provincia">TN</district>
-                        <country key="N">IT</country>
+                        <country key="IT">IT</country>
                         <note>Foto scattata nelle vicinanze della città</note>
                     </place>
                 </listPlace>
-                <listOrg>
-                    <org xml:id="N3">
-                        <orgName type="N"></orgName>
-                        <desc>...</desc>
-                    </org>
-                </listOrg>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
             <correspDesc>
                 <correspAction type="sent">
-                    <persName ref="#CR" />
                     <placeName ref="#CZ" />
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
-                    <date type="postage" when="1916-12-19">1916/12/19</date>
-                    <date type="writing" when="1916-12-19">1916/12/19</date>
+                    <date type="postage" when="1915-09-16">1916/09/15</date>
+                    <date type="writing" when="1915-09-16">1916/09/15</date>
                 </correspAction>
                 <correspAction type="received">
                     <persName>...</persName>
