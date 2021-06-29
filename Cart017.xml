@@ -5,10 +5,10 @@
         <fileDesc>
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
-                <title>L'Adige (verso Chizzola)</title>
+                <title>L'Adige (verso Chizzola) - Edizione digitale</title>
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
-                    <resp>transcription by</resp>
+                    <resp>Conversione TEI P5 a cura di</resp>
                     <name ref="#FS">
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
@@ -37,6 +37,7 @@
                 <respStmt>
                     <resp>Compilatore</resp>
                     <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
                 </respStmt>
                 <respStmt>
                     <resp>Responsabile scientifico</resp>
@@ -63,8 +64,7 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di una fotografia del fiume Adige, scattata nelle vicinanze di Chizzola.
-                I colori sono sbiaditi a causa dell'usura del tempo tuttavia l'immagine risulta ancora nitida e non troppo rovinata.</note>
+                <note n="1.1"></note>
                 <note n="1.2">Sul retro, che si divide a metà, troviamo nel lato sinistro, in alto a sinistra un numero, il 17, che si sovrappone a un timbro sbiadito, presumibilmente della croce rossa. 
                 Sempre nello stesso lato, è presente una scritta in corsivo in cui si distinguono chiaramente una data e la firma finale. 
                 In basso a sinistra si legge chiaramente la scritta "L'Adige (verso Chizzola). T. Cascella.", luogo in cui è stata scattata la foto. </note>
@@ -78,7 +78,7 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">L'Adige (verso Chizzola)</title>
-                    <author xml:id="TG">Tintura Giuseppe</author>
+                    <author xml:id="TC">Tommaso Cascella</author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="19150916">16/09/1915</date>
@@ -170,22 +170,23 @@
         </profileDesc>
     </teiHeader>
     <!-- DEFINIZIONE -->
-    <text type="cartolina" xml:id="xx">
+    <text type="cartolina" xml:id="cart017">
         <!-- TRASCRIZIONE -->
         <body>
             <div type="fronte">
                 <figure>
-                    <graphic url="nomedamettere/images/nomefile.jpg" />
-                    <figDesc>Descrizione sintetica dell'immagine</figDesc>
-                    <head>ripetere titolo con eventuale autore</head>
+                    <graphic url="./Cartoline/7694-017F.jpg" />
+                    <figDesc>Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di una fotografia del fiume Adige, scattata nelle vicinanze di Chizzola.
+                        I colori sono sbiaditi a causa probabilmente dell'usura del tempo tuttavia l'immagine risulta ancora nitida e non troppo rovinata.</figDesc>
+                    <head>L'Adige (verso Chizzola) - Tommaso Cascella</head>
                 </figure>
             </div>
             <div facs="..." type="retro">
                 <div type="message">
                     <!-- ... -->
-                    <p>luogo e data</p>
-                    <p>messaggio</p>
-                    <p>>messaggio</p>
+                    <p>16-9-191</p>
+                    <p>Riceva tanti</p>
+                    <p>saluti a lei</p>
                     <signed>firma</signed>
                 </div>
                 <div type="destination">
