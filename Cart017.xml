@@ -182,12 +182,57 @@
                 </figure>
             </div>
             <div facs="..." type="retro">
+                <div type="codice">
+                    <p>
+                        <num type="cardinal">
+                            <idno> 17 </idno>
+                        </num>
+                        <unclear reason="faded">
+                            <stamp type="mark" />
+                            <note>Sotto al numero 17 compare un timbro illeggibile, probabilmente della croce rossa, dato che sembra intravedersi un simbolo simile</note>
+                        </unclear>
+                    </p>
+                </div>
                 <div type="message">
-                    <!-- ... -->
-                    <p>16-9-191</p>
-                    <p>Riceva tanti</p>
-                    <p>saluti a lei</p>
-                    <signed>firma</signed>
+                    <p>
+                        <lb />
+                        <date>
+                            <num>16</num>
+                            <pc>-</pc>
+                            <num>9</num>
+                            <pc>-</pc>
+                            <num>
+                                191
+                                <unclear reason="illegible">
+                                    <num>
+                                        <note>Non si legge l'ultimo numero della data</note>
+                                    </num>
+                                </unclear>
+                            </num>
+                        </date>
+                        <lb />
+                        <w>Riceva</w>
+                        <w>tanti</w>
+                        <lb />
+                        <w>saluti</w>
+                        <w>a</w>
+                        <w>lei</w>
+                        <lb />
+                        <w>e</w>
+                        <w>famiglia</w>
+                        <lb />
+                        <w>Soldato</w>
+                        <w>Benelli</w>
+                        <lb />
+                        <w>Romeo</w>
+                        <w>Infermieria</w>
+                        <lb />
+                        <w>Pinfemo</w>
+                        <lb />
+                        <w>Prov</w>
+                        <pc>.</pc>
+                        <w></w>
+                    </p>
                 </div>
                 <div type="destination">
                     <p>
