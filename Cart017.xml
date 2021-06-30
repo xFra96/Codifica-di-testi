@@ -65,12 +65,6 @@
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
                 <note n="1.1"></note>
-                <note n="1.2">Sul retro, che si divide a metà, troviamo nel lato sinistro, in alto a sinistra un numero, il 17, che si sovrappone a un timbro sbiadito, presumibilmente della croce rossa. 
-                Sempre nello stesso lato, è presente una scritta in corsivo in cui si distinguono chiaramente una data e la firma finale. 
-                In basso a sinistra si legge chiaramente la scritta "L'Adige (verso Chizzola). T. Cascella.", luogo in cui è stata scattata la foto. </note>
-                <note n="1.3">Si distinguono, nella parte destra in alto la scritta "Cartolina Postale Commemorativa della IV guerra per l'indipendenza", nonostante la sovrapposizione di due timbri, questi ultimi non del tutto leggibli.
-                 Si notano invece chiaramente il francobollo, a destra, delle poste italiane, il simbolo della Croce Rossa Italiana al centro, e sulla sinistra una dicitura: "edizione della Croce Rossa Italiana a proprio esclusivo beneficio".
-                 Nella parte inferiore si nota l'indirizzo del destinatario</note>
             </notesStmt>
             <sourceDesc>
                 <bibl>
@@ -140,7 +134,7 @@
                 <correspAction type="sent">
                     <placeName ref="#CZ" />
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
-                    <date type="postage" when="1915/09/16">1916/09/15</date>
+                    <date type="postage" when="1915/09/15">1916/09/15</date>
                     <date type="writing">
                         <num>16</num>
                         <pc>-</pc>
@@ -159,7 +153,7 @@
                 <correspAction type="received">
                     <persName>
                         Turtura Giuseppe
-                        <addName>Capo Mastro Muratore</addName>
+                        <roleName>Capo Mastro Muratore</roleName>
                     </persName>
                     <address>
                         <street>Via Girolamo Rossi</street>
@@ -188,15 +182,17 @@
         <body>
             <div type="fronte">
                 <figure>
-                    <graphic url="./Cartoline/7694-017F.jpg" />
-                    <figDesc>Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di una fotografia del fiume Adige, scattata nelle vicinanze di Chizzola.
-                        I colori sono sbiaditi a causa probabilmente dell'usura del tempo tuttavia l'immagine risulta ancora nitida e non troppo rovinata.</figDesc>
+                    <graphic url="./cartoline/7694-017F.jpg" />
+                    <figDesc>Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di un dipinto del fiume Adige, fatto dal pittore Tommaso Cascella.
+                        I colori sono sbiaditi a causa probabilmente dell'usura del tempo, che si nota molto anche nei bordi della cartolina e nel retro, tuttavia l'immagine risulta ancora nitida e non troppo rovinata in quanto si riescono a distinguere i vari elementi del paesaggio.
+                    Troviamo infatti al centro il fiume Adige con ai lati due pareti montouse che si innalzano; sulla destra si può notare una carovana che si sta spostando verso i ponti per attraversare il corso d'acqua.
+                </figDesc>
                     <head>L'Adige (verso Chizzola) - Tommaso Cascella</head>
                 </figure>
             </div>
-            <div facs="..." type="retro">
-                <div type="lato_sinistro">
-                    <div type="codice">
+            <div facs="#retro17" type="retro">
+                <div xml:id="lato_sinistro" facs="#ls">
+                    <div facs="#angolosx" type="code">
                         <p>
                             <num type="cardinal">
                                 <idno> 17 </idno>
@@ -207,7 +203,7 @@
                             </unclear>
                         </p>
                     </div>
-                    <div type="message">
+                    <div facs="#msg" type="message">
                         <p>
                             <lb />
                             <date>
@@ -243,87 +239,125 @@
                             <lb />
                             <w>Pinfemo</w>
                             <lb />
-                            <abbr>
+                            <abbr type="suspension">
                                 Prov
                                 <pc>.</pc>
                             </abbr>
                         </p>
                     </div>
                 </div>
-                <div type="marks">
-                    <p>
-                        <lb />
-                        <w>Cartolina</w>
-                        <w>Postale</w>
-                        <w>Commemorativa</w>
-                        <lb />
-                        <w>Della</w>
-                        <abbr>
-                            <num>
+                <div xml:id="lato_destro" facs="#ld">
+                    <div facs="#org" type="message">
+                        <p>
+                            <lb />
+                            <w>Cartolina</w>
+                            <w>Postale</w>
+                            <w>Commemorativa</w>
+                            <lb />
+                            <w>Della</w>
+                            <distinct type="roman">
                                 V
                                 <pc>.</pc>
-                            </num>
-                        </abbr>
-                        <w>Gverra</w>
-                        <w>per</w>
-                        <w>l</w>
-                        <pc>'</pc>
-                        <w>indipendenza</w>
-                        <unclear>
-                            <w>
-                                <note>Ultima parola non leggibile, si presuppone sia Italia</note>
-                            </w>
-                        </unclear>
-                        <lb />
-                        <!-- stamps -->
-                        <stamp type="postmark">
-                            <date when="1915-09-16">1915/09/16</date>
-                        </stamp>
-                        <unclear reason="faded">
+                            </distinct>
+                            <distinct type="latin">
+                                <w>Gverra</w>
+                            </distinct>
+                            <w>per</w>
+                            <w>l</w>
+                            <pc>'</pc>
+                            <w>indipendenza</w>
+                            <unclear>
+                                <w>
+                                    <note>Ultima parola non leggibile, si presuppone sia Italia</note>
+                                </w>
+                            </unclear>
+                        </p>
+                    </div>
+                    <div facs="#timbri" type="marks">
+                        <p>
+                            <!-- stamps -->
                             <stamp type="postmark">
-                                <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                <date when="1915-09-16">1915/09/16</date>
                             </stamp>
-                        </unclear>
-                        <figure>
-                            <figDesc>
-                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo anche l'altro elemento
-                            </figDesc>                            
-                        </figure>
-                        <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
-                    </p>
-                </div>
-                <div type="destination">
-                    <p>
-                        <address>
-                            <addrLine>
+                            <phr>
+                                <lb />
+                                <w>Edizione</w>
+                                <lb />
+                                <w>della</w>
+                                <lb />
+                                <w>Croce</w>
+                                <w>Rossa</w>
+                                <w>Italiana</w>
+                                <w>a</w>
+                                <w>proprio</w>
+                                <distinct type="latin">
+                                    <w>esclvsivo</w>
+                                </distinct>
+                                <w>beneficio</w>
+                            </phr>
+                            <unclear reason="faded">
+                                <stamp type="postmark">
+                                    <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                </stamp>
+                            </unclear>
+                            <figure>
+                                <figDesc>
+                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo il Francobollo e l'altra frase
+                            </figDesc>
+                            </figure>
+                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+                    </div>
+                    <div facs="#ricevente" type="destination">
+                        <p>
+                            <phr>
                                 <w>Al</w>
                                 <abbr>Signor</abbr>
-                            </addrLine>
-                            <addrLine>
-                                <persName>
-                                    <surname>Turtura</surname>
-                                    <forename>Giuseppe</forename>
-                                </persName>
-                            </addrLine>
-                            <lb />
-                            <street>
-                                <w>Via</w>
-                                <w>Girolamo</w>
-                                <w>Rossi</w>
-                            </street>
-                            <addrLine>
-                                <addName>
-                                    <w>Capo</w>
-                                    <w>Mastro</w>
-                                    <lb />
-                                    <w>Muratore</w>
-                                </addName>
-                                <placeName>Ravenna</placeName>
-                            </addrLine>
-                        </address>
-                    </p>
+                            </phr>
+                            <address>
+                                <addrLine>
+                                    <persName>
+                                        <surname>Turtura</surname>
+                                        <forename>Giuseppe</forename>
+                                    </persName>
+                                </addrLine>
+                                <lb />
+                                <street>
+                                    <w>Via</w>
+                                    <w>Girolamo</w>
+                                    <w>Rossi</w>
+                                </street>
+                                <addrLine>
+                                    <roleName>
+                                        <w>Capo</w>
+                                        <w>Mastro</w>
+                                        <lb />
+                                        <w>Muratore</w>
+                                    </roleName>
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </p>
+                    </div>
                 </div>
             </div>
         </body>
     </text>
+    <facsimile>
+        <!--retro-->
+        <surface xml:id="retro17">
+            <graphic url='./cartoline/7694-017R.jpg' width='1642px' height='1055px' />
+            <!-- Lati destro e sinistro-->
+            <zone xml:id="ls" ulx="12" uly="10" lrx="665" lry="1040" />
+            <zone xml:id="ld" ulx="649" uly="9" lrx="1618" lry="1033" />
+            <!-- Lato destro -->
+            <zone xml:id="org" ulx="674" uly="10" lrx="1614" lry="189" />
+            <zone xml:id="timbri" ulx="674" uly="193" lrx="1622" lry="582" />
+            <zone xml:id="ricevente" ulx="676" uly="593" lrx="1621" lry="1041" />
+            <!-- Lato sinistro -->
+            <zone xml:id="angolosx" ulx="11" uly="9" lrx="325" lry="300" />
+            <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802" />
+            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" />
+        </surface>
+    </facsimile>
 </TEI>
