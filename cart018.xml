@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                <title>L'Adige (verso Chizzola) - Edizione digitale</title>
+                <!-- TRASCRITTORE nome e cognome-->
+                <respStmt>
+                    <resp>Conversione TEI P5 a cura di</resp>
+                    <name ref="#FS">
+                        <forename>Francesco</forename>
+                        <surname>Spagnoli</surname>
+                    </name>
+                </respStmt>
+                <!-- ENTE DI APPARTENENZA -->
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
+               Testi
+                    <!-- COMPILAZIONE -->
+                    <date>2021</date>
+                </edition>
+                <!-- NOME COMPILATORE -->
+                <respStmt>
+                    <resp>encoding by</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
+                </respStmt>
+                <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <name xml:id="GP">Giacomo Paolicchi</name>
+                    <name xml:id="ES">Enrica Salvatori</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <name xml:id="MR">Marzia Ratti</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Unipi</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability>
+                    <p>Available under licence only</p>
+                </availability>
+                <date when="2019">2019</date>
+                <distributor>LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
+            </publicationStmt>
+            <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
+            <notesStmt xml:id="notesStmt1">
+                <note n="1.1"></note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
+                        non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
+                        registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
+                    <title xml:id="tit1">L'Adige (verso Chizzola)</title>
+                    <author xml:id="TC">Tommaso Cascella</author>
+                    <publisher xml:id="CR">Croce Rossa</publisher>
+                    <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
+                    <date when="19150916">16/09/1915</date>
+                </bibl>
+                <msDesc>
+                    <!-- COLLOCAZIONE SPECIFICA -->
+                    <!-- CODICE IDENTIFICATIVO -->
+                    <msIdentifier>
+                        <country>Italia</country>
+                        <settlement>La Spezia (SP)</settlement>
+                        <!-- COLLOCAZIONE SPECIFICA -->
+                        <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                        <!-- CODICE IDENTIFICATIVO -->
+                        <idno>7694_017_001/002</idno>
+                    </msIdentifier>
+                    <!-- Informazioni sul contenuto della cartolina -->
+                    <!-- DESCRIZIONE -->
+                    <msContents>
+                        <summary>Cartolina Artistica</summary>
+                        <textLang>Italiano</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType>Cartolina</objectType>
+                                    <!-- MATERIALI -->
+                                    <material>Carta</material>
+                                    <!-- DIMENSIONE -->
+                                    <dimensions unit="cm">
+                                        <height>9</height>
+                                        <width>14</width>
+                                    </dimensions>
+                                    <stamp>francobollo - Regno d'Italia</stamp>
+                                </support> <!-- CONSERVAZIONE 
+                                buono = non occorrono interventi di restauro;
+                                discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro-->
+                                <condition>Buono</condition>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+                <!-- LUOGHI -->
+                <listPlace>
+                    <place xml:id="CZ">
+                        <placeName>Chizzola</placeName>
+                        <settlement type="località">Chizzola</settlement>
+                        <district type="provincia">TN</district>
+                        <country key="IT">IT</country>
+                        <note>Foto scattata nelle vicinanze della città</note>
+                    </place>
+                </listPlace>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <correspDesc>
+                <correspAction type="sent">
+                    <placeName ref="#CZ" />
+                    <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
+                    <date type="postage" when="1915/09/15">1916/09/15</date>
+                    <date type="writing">
+                        <num>16</num>
+                        <pc>-</pc>
+                        <num>9</num>
+                        <pc>-</pc>
+                        <num>
+                            191
+                            <unclear reason="illegible">
+                                <num>
+                                    <note>Non si legge l'ultimo numero della data</note>
+                                </num>
+                            </unclear>
+                        </num>
+                    </date>
+                </correspAction>
+                <correspAction type="received">
+                    <persName>
+                        Turtura Giuseppe
+                        <roleName>Capo Mastro Muratore</roleName>
+                    </persName>
+                    <address>
+                        <street>Via Girolamo Rossi</street>
+                        <placeName>Ravenna</placeName>
+                    </address>
+                </correspAction>
+            </correspDesc>
+            <textClass>
+                <keywords>
+                    <!-- soggettario -->
+                    <!-- tipologia -->
+                    <!-- descrizione -->
+                    <term>Cartolina </term>
+                    <term>Cartolina Paesaggistica</term>
+                    <term>Foto del fiume Adige scattata nei pressi di Chizzola, frazione di Trento</term>
+                </keywords>
+            </textClass>
+            <langUsage>
+                <language ident="it-IT">italiano</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <!-- DEFINIZIONE -->
+    <text type="cartolina" xml:id="cart018">
+        <!-- TRASCRIZIONE -->
+        <body>
+            <div type="fronte">
+                <figure>
+                    <graphic url="" />
+                    <figDesc></figDesc>
+                    <head></head>
+                </figure>
+            </div>
+            <div facs="#retro18" type="retro">
+                <div xml:id="lato_sinistro" facs="#ls"></div>
+                <div xml:id="lato_destro" facs="#ld">
+                    <div facs="#org" type="message">
+                        <p>
+                            <lb />
+                            <w>Cartolina</w>
+                            <w>Postale</w>
+                            <w>Commemorativa</w>
+                            <lb />
+                            <w>Della</w>
+                            <distinct type="roman">
+                                V
+                                <pc>.</pc>
+                            </distinct>
+                            <distinct type="latin">
+                                <w>Gverra</w>
+                            </distinct>
+                            <w>per</w>
+                            <w>l</w>
+                            <pc>'</pc>
+                            <w>indipendenza</w>
+                            <abbr type="contraction">
+                                <w>
+                                    ital
+                                    <pc>.</pc>
+                                    na
+                                </w>
+                            </abbr>
+                        </p>
+                    </div>
+                    <div facs="#timbri" type="marks">
+                        <p>
+                            <!-- stamps -->
+                            <stamp type="postmark">
+                                <date when="1915-09-16">1915/09/16</date>
+                            </stamp>
+                            <phr>
+                                <lb />
+                                <w>Edizione</w>
+                                <lb />
+                                <w>della</w>
+                                <lb />
+                                <w>Croce</w>
+                                <w>Rossa</w>
+                                <w>Italiana</w>
+                                <w>a</w>
+                                <w>proprio</w>
+                                <distinct type="latin">
+                                    <w>esclvsivo</w>
+                                </distinct>
+                                <w>beneficio</w>
+                            </phr>
+                            <unclear reason="faded">
+                                <stamp type="postmark">
+                                    <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                </stamp>
+                            </unclear>
+                            <figure>
+                                <figDesc>
+                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo il Francobollo e l'altra frase
+                            </figDesc>
+                            </figure>
+                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+                    </div>
+                    <div facs="#ricevente" type="destination">
+                        <p>
+                            <phr>
+                                <w>Al</w>
+                                <abbr>Signor</abbr>
+                            </phr>
+                            <address>
+                                <addrLine>
+                                    <persName>
+                                        <surname>Turtura</surname>
+                                        <forename>Giuseppe</forename>
+                                    </persName>
+                                </addrLine>
+                                <lb />
+                                <street>
+                                    <w>Via</w>
+                                    <w>Girolamo</w>
+                                    <w>Rossi</w>
+                                </street>
+                                <addrLine>
+                                    <roleName>
+                                        <w>Capo</w>
+                                        <w>Mastro</w>
+                                        <lb />
+                                        <w>Muratore</w>
+                                    </roleName>
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </text>
+    <facsimile>
+        <!--retro-->
+        <surface xml:id="retro18"></surface>
+    </facsimile>
+</TEI>
