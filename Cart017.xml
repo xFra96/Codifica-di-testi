@@ -168,7 +168,7 @@
                 </correspAction>
             </correspDesc>
             <textClass>
-                <keywords scheme="">
+                <keywords>
                     <!-- soggettario -->
                     <!-- tipologia -->
                     <!-- descrizione -->
@@ -239,36 +239,87 @@
                             <w>Benelli</w>
                             <lb />
                             <w>Romeo</w>
-                            <w>Infermieria</w>
+                            <w>Infermeria</w>
                             <lb />
                             <w>Pinfemo</w>
                             <lb />
-                            <w>Prov</w>
-                            <pc>.</pc>
-                            <w></w>
+                            <abbr>
+                                Prov
+                                <pc>.</pc>
+                            </abbr>
                         </p>
                     </div>
                 </div>
-                <div type="destination">
+                <div type="marks">
                     <p>
+                        <lb />
+                        <w>Cartolina</w>
+                        <w>Postale</w>
+                        <w>Commemorativa</w>
+                        <lb />
+                        <w>Della</w>
+                        <abbr>
+                            <num>
+                                V
+                                <pc>.</pc>
+                            </num>
+                        </abbr>
+                        <w>Gverra</w>
+                        <w>per</w>
+                        <w>l</w>
+                        <pc>'</pc>
+                        <w>indipendenza</w>
+                        <unclear>
+                            <w>
+                                <note>Ultima parola non leggibile, si presuppone sia Italia</note>
+                            </w>
+                        </unclear>
+                        <lb />
                         <!-- stamps -->
                         <stamp type="postmark">
-                            <mentioned>scritture dentro al timbro</mentioned>
-                            <date when="1916-12-19">1916/12/19</date>
+                            <date when="1915-09-16">1915/09/16</date>
                         </stamp>
-                        <stamp type="postage">francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        <unclear reason="faded">
+                            <stamp type="postmark">
+                                <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                            </stamp>
+                        </unclear>
+                        <figure>
+                            <figDesc>
+                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo anche l'altro elemento
+                            </figDesc>                            
+                        </figure>
+                        <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                     </p>
+                </div>
+                <div type="destination">
                     <p>
                         <address>
-                            <addrLine>Signorina</addrLine>
                             <addrLine>
-                                <persName ref="#OT">Olivia Turtura </persName>
+                                <w>Al</w>
+                                <abbr>Signor</abbr>
                             </addrLine>
-                            <addrLine>Via G. Rossi 53</addrLine>
                             <addrLine>
-                                <placeName ref="#RV">Ravenna</placeName>
+                                <persName>
+                                    <surname>Turtura</surname>
+                                    <forename>Giuseppe</forename>
+                                </persName>
                             </addrLine>
-                            <addrLine></addrLine>
+                            <lb />
+                            <street>
+                                <w>Via</w>
+                                <w>Girolamo</w>
+                                <w>Rossi</w>
+                            </street>
+                            <addrLine>
+                                <addName>
+                                    <w>Capo</w>
+                                    <w>Mastro</w>
+                                    <lb />
+                                    <w>Muratore</w>
+                                </addName>
+                                <placeName>Ravenna</placeName>
+                            </addrLine>
                         </address>
                     </p>
                 </div>
