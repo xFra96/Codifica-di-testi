@@ -3,6 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
+
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
                 <title>L'Adige (verso Chizzola) - Edizione digitale</title>
@@ -20,6 +21,7 @@
                     <name type="comune" xml:id="SP">Comune della Spezia</name>
                 </respStmt>
             </titleStmt>
+
             <editionStmt>
                 <edition>
                     Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
@@ -49,6 +51,7 @@
                     <name xml:id="MR">Marzia Ratti</name>
                 </respStmt>
             </editionStmt>
+
             <publicationStmt>
                 <publisher>Unipi</publisher>
                 <pubPlace>Pisa</pubPlace>
@@ -66,7 +69,9 @@
             <notesStmt xml:id="notesStmt1">
                 <note n="1.1"></note>
             </notesStmt>
+
             <sourceDesc>
+
                 <bibl>
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
@@ -77,6 +82,7 @@
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="19150916">16/09/1915</date>
                 </bibl>
+
                 <msDesc>
                     <!-- COLLOCAZIONE SPECIFICA -->
                     <!-- CODICE IDENTIFICATIVO -->
@@ -117,6 +123,7 @@
                         </objectDesc>
                     </physDesc>
                 </msDesc>
+
                 <!-- LUOGHI -->
                 <listPlace>
                     <place xml:id="CZ">
@@ -126,7 +133,37 @@
                         <country key="IT">IT</country>
                         <note>Foto scattata nelle vicinanze della città</note>
                     </place>
+                    <place xml:id="VGR">
+                        <placeName>Via Girolamo Rossi</placeName>
+                        <settlement type="località">Ravenna</settlement>
+                        <district type="provincia">RV</district>
+                        <country key="IT">IT</country>
+                        <note>Indirizzo ricevente</note>
+                    </place>
                 </listPlace>
+
+                <!-- NOMI -->
+                <listPerson>
+                    <person>
+                        <persName ref="#TG">
+                            <forename>Giuseppe</forename>
+                            <surname>Turtura</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <occupation n="1">Capo Mastro Muratore</occupation>
+                        <note>Ricevente</note>
+                    </person>
+                    <person>
+                        <persName ref="#BR">
+                            <forename>Romeo</forename>
+                            <surname>Benelli</surname>
+                        </persName>
+                        <sex>M</sex>
+                        <occupation n="2">Soldato</occupation>
+                        <note>Mittente</note>
+                    </person>
+                </listPerson>
+
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -237,12 +274,19 @@
                             <w>Romeo</w>
                             <w>Infermeria</w>
                             <lb />
-                            <w>Pinfemo</w>
+                            <unclear reason="illegible">
+                                <w>
+                                    <note>Viene riportato dal mittente il nome di una qualche localita, probabilmente quella dell'infermeria da cui sta spedendo</note>
+                                </w>
+                            </unclear>
                             <lb />
                             <abbr type="suspension">
                                 Prov
                                 <pc>.</pc>
                             </abbr>
+                            <placeName>
+                                <w>Udine</w>
+                            </placeName>
                         </p>
                     </div>
                 </div>

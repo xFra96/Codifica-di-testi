@@ -136,12 +136,19 @@
                     <persName ref="#GC" />
                     <placeName>...</placeName>
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
-                    <date type="postage" when="1916-12-19">1916/12/19</date>
-                    <date type="writing" when="1916-12-19">1916/12/19</date>
+                    <date type="writing" when="1916-12-19">1915/09/02</date>
                 </correspAction>
                 <correspAction type="received">
-                    <persName>...</persName>
-                    <placeName>...</placeName>
+                    <persName>
+                        <forename>Olivia</forename>
+                        Turtura
+                        <surname></surname>
+                    </persName>
+                    <address>
+                        <street>Via Girolamo Rossi</street>
+                        <placeName type="province">Ravenna</placeName>
+                        <placeName type="city">Ravenna</placeName>
+                    </address>
                 </correspAction>
                 <correspContext>
                     <p>
