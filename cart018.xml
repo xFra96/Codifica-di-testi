@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
-                <title>L'Adige (verso Chizzola) - Edizione digitale</title>
+                <title>Avanscoperta (dall'altipiano carsico) - Edizione digitale</title>
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
@@ -71,11 +71,11 @@
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
-                    <title xml:id="tit1">L'Adige (verso Chizzola)</title>
+                    <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
                     <author xml:id="TC">Tommaso Cascella</author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
-                    <date when="19150916">16/09/1915</date>
+                    <date when=""></date>
                 </bibl>
                 <msDesc>
                     <!-- COLLOCAZIONE SPECIFICA -->
@@ -86,7 +86,7 @@
                         <!-- COLLOCAZIONE SPECIFICA -->
                         <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <!-- CODICE IDENTIFICATIVO -->
-                        <idno>7694_017_001/002</idno>
+                        <idno>7694_018_001/002</idno>
                     </msIdentifier>
                     <!-- Informazioni sul contenuto della cartolina -->
                     <!-- DESCRIZIONE -->
@@ -117,16 +117,24 @@
                         </objectDesc>
                     </physDesc>
                 </msDesc>
-                <!-- LUOGHI -->
-                <listPlace>
-                    <place xml:id="CZ">
-                        <placeName>Chizzola</placeName>
-                        <settlement type="località">Chizzola</settlement>
-                        <district type="provincia">TN</district>
-                        <country key="IT">IT</country>
-                        <note>Foto scattata nelle vicinanze della città</note>
-                    </place>
-                </listPlace>
+                <listPerson>
+                    <person>
+                        <persName ref="#GC">
+                            <forename>Giovanni</forename>
+                            <surname>Coliola </surname>
+                        </persName>
+                        <sex>M</sex>
+                        <occupation>[maggiore]</occupation>
+                    </person>
+
+                    <person>
+                        <persName ref="#OT">
+                            <forename>Oliva</forename>
+                            <surname>Turtura</surname>
+                        </persName>
+                        <sex>F</sex>
+                    </person>
+                </listPerson>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
