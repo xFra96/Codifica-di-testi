@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
-                <title>L'Adige (verso Chizzola) - Edizione digitale</title>
+                <title>Avanscoperta (dall'altipiano carsico) - Edizione digitale</title>
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
@@ -55,7 +55,7 @@
                 <availability>
                     <p>Available under licence only</p>
                 </availability>
-                <date when="2019">2019</date>
+                <date when="2021">2021</date>
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
@@ -71,11 +71,11 @@
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
-                    <title xml:id="tit1">L'Adige (verso Chizzola)</title>
+                    <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
                     <author xml:id="TC">Tommaso Cascella</author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
-                    <date when="19150916">16/09/1915</date>
+                    <date when="1915">1915</date>
                 </bibl>
                 <msDesc>
                     <!-- COLLOCAZIONE SPECIFICA -->
@@ -86,12 +86,12 @@
                         <!-- COLLOCAZIONE SPECIFICA -->
                         <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <!-- CODICE IDENTIFICATIVO -->
-                        <idno>7694_017_001/002</idno>
+                        <idno>7694_018_001/002</idno>
                     </msIdentifier>
                     <!-- Informazioni sul contenuto della cartolina -->
                     <!-- DESCRIZIONE -->
                     <msContents>
-                        <summary>Cartolina Geografica</summary>
+                        <summary>Cartolina Artistica</summary>
                         <textLang>Italiano</textLang>
                     </msContents>
                     <physDesc>
@@ -119,12 +119,18 @@
                 </msDesc>
                 <!-- LUOGHI -->
                 <listPlace>
-                    <place xml:id="CZ">
-                        <placeName>Chizzola</placeName>
-                        <settlement type="località">Chizzola</settlement>
-                        <district type="provincia">TN</district>
+                    <place xml:id="VGR">
+                        <placeName>Via Girolamo Rossi</placeName>
+                        <settlement type="località">Ravenna</settlement>
+                        <district type="provincia">RV</district>
                         <country key="IT">IT</country>
-                        <note>Foto scattata nelle vicinanze della città</note>
+                        <note>Indirizzo ricevente</note>
+                    </place>
+                    <place xml:id="FO">
+                        <placeName>Formica</placeName>
+                        <district type="provincia">MO</district>
+                        <country key="IT">IT</country>
+                        <note>Località mittente</note>
                     </place>
                 </listPlace>
             </sourceDesc>
@@ -133,16 +139,15 @@
         <profileDesc>
             <correspDesc>
                 <correspAction type="sent">
-                    <persName ref="#GC" />
-                    <placeName>...</placeName>
+                    <placeName type="province">Formica</placeName>
+                    <placeName type="city">Modena</placeName>
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
                     <date type="writing" when="1916-12-19">1915/09/02</date>
                 </correspAction>
                 <correspAction type="received">
                     <persName>
                         <forename>Olivia</forename>
-                        Turtura
-                        <surname></surname>
+                        <surname>Turtura</surname>
                     </persName>
                     <address>
                         <street>Via Girolamo Rossi</street>

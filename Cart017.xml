@@ -58,7 +58,7 @@
                 <availability>
                     <p>Available under licence only</p>
                 </availability>
-                <date when="2019">2019</date>
+                <date when="2021">2021</date>
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
@@ -80,7 +80,7 @@
                     <author xml:id="TC">Tommaso Cascella</author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
-                    <date when="19150916">16/09/1915</date>
+                    <date when="1915">1915</date>
                 </bibl>
 
                 <msDesc>
