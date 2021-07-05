@@ -192,9 +192,32 @@
                 </figure>
             </div>
             <div facs="#retro18" type="retro">
-                <div xml:id="lato_sinistro" facs="#ls"></div>
+                <div xml:id="lato_sinistro" facs="#ls">
+                    <div facs="#altosx" type="code">
+                        <p>
+                            <num type="cardinal">
+                                <idno> 18 </idno>
+                            </num>
+                            <unclear reason="faded">
+                                <stamp type="mark" />
+                                <note>Sotto al numero 18 compare un timbro poco leggibile, probabilmente della croce rossa</note>
+                            </unclear>
+                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
+                        </p>
+                    </div>
+                    <div facs="#msg" type="message">
+                        <p>
+                            <lb />
+                            <unclear reason="illegible">
+                                <w>
+                                    <note>Viene riportato dal mittente il nome di una qualche localita, probabilmente quella dell'infermeria da cui sta spedendo</note>
+                                </w>
+                            </unclear>
+                        </p>
+                    </div>
+                </div>
                 <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#org" type="message">
+                    <div facs="#altodx" type="message">
                         <p>
                             <lb />
                             <w>Cartolina</w>
@@ -224,10 +247,6 @@
                     </div>
                     <div facs="#timbri" type="marks">
                         <p>
-                            <!-- stamps -->
-                            <stamp type="postmark">
-                                <date when="1915-09-16">1915/09/16</date>
-                            </stamp>
                             <phr>
                                 <lb />
                                 <w>Edizione</w>
@@ -244,48 +263,52 @@
                                 </distinct>
                                 <w>beneficio</w>
                             </phr>
-                            <unclear reason="faded">
-                                <stamp type="postmark">
-                                    <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
-                                </stamp>
-                            </unclear>
                             <figure>
-                                <figDesc>
-                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo il Francobollo e l'altra frase
-                            </figDesc>
+                                <figDesc>Si distingue nitidamente il logo della croce rossa, contornata da una cornice. L'area del francobollo è vuota</figDesc>
                             </figure>
-                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
                             <phr>
-                                <w>Al</w>
-                                <abbr>Signor</abbr>
+                                <w>All</w>
+                                <pc>'</pc>
+                                <unclear>
+                                    <w>
+                                        <note>Non si capisce bene la seconda parola</note>
+                                    </w>
+                                </unclear>
+                                <w>Signorina</w>
                             </phr>
-                            <address>
-                                <addrLine>
-                                    <persName>
-                                        <surname>Turtura</surname>
-                                        <forename>Giuseppe</forename>
-                                    </persName>
-                                </addrLine>
-                                <lb />
-                                <street>
-                                    <w>Via</w>
-                                    <w>Girolamo</w>
-                                    <w>Rossi</w>
-                                </street>
-                                <addrLine>
-                                    <roleName>
-                                        <w>Capo</w>
-                                        <w>Mastro</w>
-                                        <lb />
-                                        <w>Muratore</w>
-                                    </roleName>
-                                    <placeName>Ravenna</placeName>
-                                </addrLine>
-                            </address>
+                            <phr>
+                                <unclear>
+                                    <w>
+                                        <note>Non si capisce bene la prima parola</note>
+                                    </w>
+                                </unclear>
+                                <persName>
+                                    <surname>Olivia</surname>
+                                    <forename>Turtura</forename>
+                                </persName>
+                            </phr>
+                            <phr>
+                                <address>
+                                    <street>
+                                        <w>Via</w>
+                                        <w>Girolamo</w>
+                                        <w>Rossi</w>
+                                    </street>
+                                    <addrLine>
+                                        <placeName>Ravenna</placeName>
+                                        <placeName>
+                                            S
+                                            <pc>.</pc>
+                                            Vittore
+                                        </placeName>
+                                    </addrLine>
+                                </address>
+                            </phr>
+
                         </p>
                     </div>
                 </div>

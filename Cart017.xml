@@ -291,7 +291,7 @@
                     </div>
                 </div>
                 <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#org" type="message">
+                    <div facs="#alto" type="message">
                         <p>
                             <lb />
                             <w>Cartolina</w>
@@ -358,29 +358,31 @@
                                 <w>Al</w>
                                 <abbr>Signor</abbr>
                             </phr>
-                            <address>
-                                <addrLine>
-                                    <persName>
-                                        <surname>Turtura</surname>
-                                        <forename>Giuseppe</forename>
-                                    </persName>
-                                </addrLine>
-                                <lb />
-                                <street>
-                                    <w>Via</w>
-                                    <w>Girolamo</w>
-                                    <w>Rossi</w>
-                                </street>
-                                <addrLine>
-                                    <roleName>
-                                        <w>Capo</w>
-                                        <w>Mastro</w>
-                                        <lb />
-                                        <w>Muratore</w>
-                                    </roleName>
-                                    <placeName>Ravenna</placeName>
-                                </addrLine>
-                            </address>
+                            <phr>
+                                <address>
+                                    <addrLine>
+                                        <persName>
+                                            <surname>Turtura</surname>
+                                            <forename>Giuseppe</forename>
+                                        </persName>
+                                    </addrLine>
+                                    <lb />
+                                    <street>
+                                        <w>Via</w>
+                                        <w>Girolamo</w>
+                                        <w>Rossi</w>
+                                    </street>
+                                    <addrLine>
+                                        <roleName>
+                                            <w>Capo</w>
+                                            <w>Mastro</w>
+                                            <lb />
+                                            <w>Muratore</w>
+                                        </roleName>
+                                        <placeName>Ravenna</placeName>
+                                    </addrLine>
+                                </address>
+                            </phr>
                         </p>
                     </div>
                 </div>
