@@ -67,7 +67,7 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1"></note>
+                <note n="1.1">Sul retro si nota la firma dell'artista del quadro riportato sul fronte della cartolina, si tratta di T. Cascella che viene accostato al nome dell'opera "L'Adige (verso Chizzola)"</note>
             </notesStmt>
 
             <sourceDesc>
@@ -171,7 +171,7 @@
                 <correspAction type="sent">
                     <placeName ref="#CZ" />
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
-                    <date type="postage" when="1915/09/15">1916/09/15</date>
+                    <date type="postage" when="1915-09-15">1916/09/15</date>
                     <date type="writing">
                         <num>16</num>
                         <pc>-</pc>
@@ -243,7 +243,7 @@
                     <div facs="#msg" type="message">
                         <p>
                             <lb />
-                            <date>
+                            <date type="writing">
                                 <num>16</num>
                                 <pc>-</pc>
                                 <num>9</num>
@@ -321,7 +321,14 @@
                         <p>
                             <!-- stamps -->
                             <stamp type="postmark">
-                                <date when="1915-09-16">1915/09/16</date>
+                                <date type="writing" when="1915-09-16">
+                                    <num>16</num>
+                                    <abbr type="contraction">
+                                        Sett
+                                        <pc>.</pc>
+                                    </abbr>
+                                    <num>15</num>
+                                </date>
                             </stamp>
                             <phr>
                                 <lb />
@@ -332,11 +339,14 @@
                                 <w>Croce</w>
                                 <w>Rossa</w>
                                 <w>Italiana</w>
+                                <lb />
                                 <w>a</w>
                                 <w>proprio</w>
+                                <lb />
                                 <distinct type="latin">
                                     <w>esclvsivo</w>
                                 </distinct>
+                                <lb />
                                 <w>beneficio</w>
                             </phr>
                             <unclear reason="faded">
@@ -354,35 +364,34 @@
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
-                            <phr>
-                                <w>Al</w>
-                                <abbr>Signor</abbr>
-                            </phr>
-                            <phr>
-                                <address>
-                                    <addrLine>
-                                        <persName>
-                                            <surname>Turtura</surname>
-                                            <forename>Giuseppe</forename>
-                                        </persName>
-                                    </addrLine>
-                                    <lb />
-                                    <street>
-                                        <w>Via</w>
-                                        <w>Girolamo</w>
-                                        <w>Rossi</w>
-                                    </street>
-                                    <addrLine>
-                                        <roleName>
-                                            <w>Capo</w>
-                                            <w>Mastro</w>
-                                            <lb />
-                                            <w>Muratore</w>
-                                        </roleName>
-                                        <placeName>Ravenna</placeName>
-                                    </addrLine>
-                                </address>
-                            </phr>
+                            <lb />
+                            <w>Al</w>
+                            <abbr type="title">Signor</abbr>
+                            <lb />
+                            <address>
+                                <addrLine>
+                                    <persName>
+                                        <surname>Turtura</surname>
+                                        <forename>Giuseppe</forename>
+                                    </persName>
+                                </addrLine>
+                                <lb />
+                                <street>
+                                    <w>Via</w>
+                                    <w>Girolamo</w>
+                                    <w>Rossi</w>
+                                </street>
+                                <lb />
+                                <addrLine>
+                                    <roleName>
+                                        <w>Capo</w>
+                                        <w>Mastro</w>
+                                        <lb />
+                                        <w>Muratore</w>
+                                    </roleName>
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
                         </p>
                     </div>
                 </div>

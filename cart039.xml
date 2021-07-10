@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
-                <title>Avanscoperta (dall'altipiano carsico) - Edizione digitale</title>
+                <title>[Donna in giallo in posa] - Edizione digitale</title>
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
@@ -64,18 +64,16 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul retro si nota la firma dell'artista del quadro riportato sul fronte della cartolina, si tratta di T. Cascella che viene accostato al nome dell'opera "Avanscoperta (dall'altipiano Carsico)"</note>
+                <note n="1.1">Sul retro riporta la stampa “Proprietà artistica riservata n  202-1” e la stampa “VERIFICATO PER CENSURA”</note>
             </notesStmt>
             <sourceDesc>
                 <bibl>
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
-                    <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
-                    <author xml:id="TC">Tommaso Cascella</author>
-                    <publisher xml:id="CR">Croce Rossa</publisher>
-                    <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
-                    <date when="1915">1915</date>
+                    <title xml:id="tit1">[Donna in giallo in posa]</title>
+                    <author xml:id="MA">Mauzan</author>
+                    <date when="1917-02-19">1917-02-19</date>
                 </bibl>
                 <msDesc>
                     <!-- COLLOCAZIONE SPECIFICA -->
@@ -86,7 +84,7 @@
                         <!-- COLLOCAZIONE SPECIFICA -->
                         <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
                         <!-- CODICE IDENTIFICATIVO -->
-                        <idno>7694_018_001/002</idno>
+                        <idno>7694_039_001/002</idno>
                     </msIdentifier>
                     <!-- Informazioni sul contenuto della cartolina -->
                     <!-- DESCRIZIONE -->
@@ -120,17 +118,11 @@
                 <!-- LUOGHI -->
                 <listPlace>
                     <place xml:id="VGR">
-                        <placeName>Via Girolamo Rossi</placeName>
+                        <placeName>Via Girolamo Rossi, 58</placeName>
                         <settlement type="località">Ravenna</settlement>
                         <district type="provincia">RV</district>
                         <country key="IT">IT</country>
                         <note>Indirizzo ricevente</note>
-                    </place>
-                    <place xml:id="FO">
-                        <placeName>Formica</placeName>
-                        <district type="provincia">MO</district>
-                        <country key="IT">IT</country>
-                        <note>Località mittente</note>
                     </place>
                 </listPlace>
             </sourceDesc>
@@ -139,10 +131,10 @@
         <profileDesc>
             <correspDesc>
                 <correspAction type="sent">
-                    <placeName type="province">Formica</placeName>
-                    <placeName type="city">Modena</placeName>
+                    <placeName type="province"></placeName>
+                    <placeName type="city"></placeName>
                     <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
-                    <date type="writing" when="1916-12-19">1915/09/02</date>
+                    <date type="writing" when="1917-02-19">19/02/1917</date>
                 </correspAction>
                 <correspAction type="received">
                     <persName>
@@ -150,7 +142,7 @@
                         <surname>Turtura</surname>
                     </persName>
                     <address>
-                        <street>Via Girolamo Rossi</street>
+                        <street>Via Girolamo Rossi, 58</street>
                         <placeName type="province">Ravenna</placeName>
                         <placeName type="city">Ravenna</placeName>
                     </address>
@@ -170,7 +162,7 @@
                     <!-- descrizione -->
                     <term>Cartolina </term>
                     <term>Cartolina Artistica </term>
-                    <term>Coppia di innamorati</term>
+                    <term>Donna in giallo in posa</term>
                 </keywords>
             </textClass>
 
@@ -186,9 +178,8 @@
         <body>
             <div type="fronte">
                 <figure>
-                    <graphic url="" />
+                    <graphic url="./cartoline/7694-039F.jpg " />
                     <figDesc></figDesc>
-                    <head></head>
                 </figure>
             </div>
             <div facs="#retro18" type="retro">
@@ -196,104 +187,84 @@
                     <div facs="#altosx" type="code">
                         <p>
                             <num type="cardinal">
-                                <idno> 18 </idno>
+                                <idno>39</idno>
                             </num>
-                            <unclear reason="faded">
-                                <stamp type="mark" />
-                                <note>Sotto al numero 18 compare un timbro poco leggibile, probabilmente della croce rossa</note>
-                            </unclear>
-                            <unclear reason="eccentric_ductus">
-                                <stamp type="mark" />
-                                <note>Il timbro non è ben leggibile in quanto la stampa non è avvenuta correttamente, infatti si nota solamente metà di esso dato che la parte rimanente è rimasta fuori dalla cartolina durante la pressione del timbro.</note>
-                            </unclear>
-                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
                     </div>
                     <div facs="#msg" type="message">
                         <p>
+                            <lb />                                                                                                                                                                                                                                      
+                            <date type="writing">
+                                <num>16</num>
+                                <pc>-</pc>
+                                <num>9</num>
+                                <pc>-</pc>
+                                <num>
+                                    191
+                                    <unclear reason="illegible">
+                                        <num>
+                                            <note>Non si legge l'ultimo numero della data</note>
+                                        </num>
+                                    </unclear>
+                                </num>
+                            </date>
                             <lb />
                             <unclear reason="illegible">
                                 <phr>
-                                    <note>Viene riportato dal mittente probabilmente un saluto</note>
+                                    <note>Viene riportato dal mittente probabilmente un saluto o una firma</note>
                                 </phr>
                             </unclear>
                         </p>
                     </div>
-                    <div facs="#mittente" type="sender">
-                        <p>
-                            <placeName>Formica</placeName>
-                            <date type="writing" when="1915-09-2">2 Settembre 1915</date>
-                        </p>
-                    </div>
                 </div>
                 <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#altodx" type="message">
-                        <p>
-                            <lb />
-                            <w>Cartolina</w>
-                            <w>Postale</w>
-                            <w>Commemorativa</w>
-                            <lb />
-                            <w>Della</w>
-                            <distinct type="roman">
-                                V
-                                <pc>.</pc>
-                            </distinct>
-                            <distinct type="latin">
-                                <w>Gverra</w>
-                            </distinct>
-                            <w>per</w>
-                            <w>l</w>
-                            <pc>'</pc>
-                            <w>indipendenza</w>
-                            <abbr type="contraction">
-                                <w>
-                                    ital
-                                    <pc>.</pc>
-                                    na
-                                </w>
-                            </abbr>
-                        </p>
-                    </div>
                     <div facs="#timbri" type="marks">
                         <p>
-                            <phr>
+                            <stamp type="mark">
+                                <w>OSPEDALE</w>
+                                <w>CHIRURGICO</w>
+                                <unclear reason="illegible">
+                                    <w>
+                                        <note>Non si legge in quanto sovrastato dalla T</note>
+                                    </w>
+                                </unclear>
                                 <lb />
-                                <w>Edizione</w>
+                                <w>VERIFICATO</w>
                                 <lb />
-                                <w>della</w>
+                                <w>PER</w>
+                                <w>CENSURA</w>
+                                <figure>
+                                    <figDesc>
+                                 Si iontravede sotto alla parola il logo della croce rossa, contornata dalla scritta "CROCE ROSSA ITALIANA"
+                                </figDesc>
+                                </figure>
                                 <lb />
-                                <w>Croce</w>
-                                <w>Rossa</w>
-                                <w>Italiana</w>
-                                <w>a</w>
-                                <w>proprio</w>
-                                <distinct type="latin">
-                                    <w>esclvsivo</w>
-                                </distinct>
-                                <w>beneficio</w>
-                            </phr>
-                            <figure>
-                                <figDesc>Si distingue nitidamente il logo della croce rossa, contornata da una cornice. L'area del francobollo è vuota</figDesc>
-                            </figure>
+                                <pc>"</pc>
+                                <w>CITTÀ</w>
+                                <w>DI</w>
+                                <w>MILANO</w>
+                                <pc>"</pc>
+                            </stamp>
+                            <unclear reason="faded">
+                                <stamp type="mark" />
+                            </unclear>
+                            <unclear reason="faded">
+                                <stamp type="mark" />
+                            </unclear>
+                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
-                            <w>All</w>
-                            <pc>'</pc>
-                            <unclear>
-                                <w>
-                                    <note>Non si capisce bene la seconda parola</note>
-                                </w>
-                            </unclear>
-                            <w>Signorina</w>
                             <lb />
-                            <unclear>
+                            <abbr type="title">
                                 <w>
-                                    <note>Non si capisce bene la prima parola</note>
+                                    Sig
+                                    <pc>.</pc>
+                                    ra
                                 </w>
-                            </unclear>
+                            </abbr>
+                            <lb />
                             <persName>
                                 <surname>Oliva</surname>
                                 <forename>Turtura</forename>
@@ -304,15 +275,11 @@
                                     <w>Via</w>
                                     <w>Girolamo</w>
                                     <w>Rossi</w>
+                                    <num>58</num>
                                 </street>
                                 <lb />
                                 <addrLine>
                                     <placeName>Ravenna</placeName>
-                                    <placeName>
-                                        S
-                                        <pc>.</pc>
-                                        Vittore
-                                    </placeName>
                                 </addrLine>
                             </address>
                         </p>
@@ -323,6 +290,6 @@
     </text>
     <facsimile>
         <!--retro-->
-        <surface xml:id="retro18"></surface>
+        <surface xml:id="retro39"></surface>
     </facsimile>
 </TEI>
