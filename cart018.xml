@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "tei_all.dtd">
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<teiCorpus xml:id="cart18" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +10,7 @@
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name ref="#FS">
+                    <name xml:id="FS">
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -325,4 +326,4 @@
         <!--retro-->
         <surface xml:id="retro18"></surface>
     </facsimile>
-</TEI>
+</teiCorpus>

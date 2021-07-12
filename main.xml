@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:id="main">
+        <fileDesc>
+            <!-- contiene informazioni del file -->
+            <titleStmt>
+                <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                <title>Progetto di codifica di Testi</title>
+                <!-- TRASCRITTORE nome e cognome-->
+                <respStmt>
+                    <resp>Conversione TEI P5 a cura di</resp>
+                    <name ref="#FS">
+                        <forename>Francesco</forename>
+                        <surname>Spagnoli</surname>
+                    </name>
+                </respStmt>
+                <!-- ENTE DI APPARTENENZA -->
+                <respStmt>
+                    <resp>Ente di Appartenenza</resp>
+                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                </respStmt>
+            </titleStmt>
+
+            <editionStmt>
+                <edition>
+                    Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
+               Testi
+                    <!-- COMPILAZIONE -->
+                    <date>2021</date>
+                </edition>
+                <!-- NOME COMPILATORE -->
+                <respStmt>
+                    <resp>encoding by</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
+                </respStmt>
+                <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
+                <respStmt>
+                    <resp>Compilatore</resp>
+                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name ref="#FS">Francesco Spagnoli</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Responsabile scientifico</resp>
+                    <name xml:id="GP">Giacomo Paolicchi</name>
+                    <name xml:id="ES">Enrica Salvatori</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Funzionario responsabile</resp>
+                    <name xml:id="MR">Marzia Ratti</name>
+                </respStmt>
+            </editionStmt>
+
+            <publicationStmt>
+                <publisher>Unipi</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability>
+                    <p>Available under licence only</p>
+                </availability>
+                <date when="2021">2021</date>
+                <distributor>LabCD</distributor>
+                <address>
+                    <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    <addrLine>Pisa</addrLine>
+                </address>
+            </publicationStmt>
+
+            <sourceDesc>
+                <!-- obbligatorio per fileDesc, fornisce informazioni sulla fonte materiale  -->
+                <bibl>
+                    <interp> Tre cartoline, una scritta dal soldato Benelli Romeo indirizzata a Turtura Giuseppe. Delle altre due non si distingue alcun mittente, mentre il ricevente di entrambe è Oliva Turtura </interp>
+                </bibl>
+                <msDesc>
+                    <msIdentifier>
+                        <country> Italia </country>
+                        <settlement> La Spezia (SP) </settlement>
+                        <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerra Mondiale</repository>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+
+        </fileDesc>
+    </teiHeader>
+
+</teiCorpus>

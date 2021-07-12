@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "tei_all.dtd">
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<teiCorpus xml:id="cart17" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-
             <titleStmt>
                 <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
                 <title>L'Adige (verso Chizzola) - Edizione digitale</title>
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name ref="#FS">
+                    <name>
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -77,8 +77,8 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">L'Adige (verso Chizzola)</title>
-                    <author xml:id="TC">Tommaso Cascella</author>
-                    <publisher xml:id="CR">Croce Rossa</publisher>
+                    <author>Benelli Romeo</author>
+                    <publisher>Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>
                 </bibl>
@@ -214,7 +214,7 @@
         </profileDesc>
     </teiHeader>
     <!-- DEFINIZIONE -->
-    <text type="cartolina" xml:id="cart017">
+    <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
             <div type="fronte">
@@ -415,4 +415,4 @@
             <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" />
         </surface>
     </facsimile>
-</TEI>
+</teiCorpus>

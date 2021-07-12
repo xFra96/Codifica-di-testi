@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "tei_all.dtd">
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<teiCorpus xml:id="cart39" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +10,7 @@
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name ref="#FS">
+                    <name xml:id="FS">
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -30,7 +31,7 @@
                 <!-- NOME COMPILATORE -->
                 <respStmt>
                     <resp>encoding by</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name xml:id="TC">Tommaso Castagneto</name>
                     <name ref="#FS">Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
@@ -72,8 +73,8 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">[Donna in giallo in posa]</title>
-                    <author xml:id="MA">Mauzan</author>
-                    <date when="1917-02-19">1917-02-19</date>
+                    <author>Mauzan</author>
+                    <date when="1917">1917</date>
                 </bibl>
                 <msDesc>
                     <!-- COLLOCAZIONE SPECIFICA -->
@@ -173,16 +174,19 @@
 
     </teiHeader>
     <!-- DEFINIZIONE -->
-    <text type="cartolina" xml:id="cart018">
+    <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
             <div type="fronte">
-                <figure>
+                <figure xml:id="frontecart">
                     <graphic url="./cartoline/7694-039F.jpg " />
                     <figDesc></figDesc>
                 </figure>
             </div>
             <div facs="#retro18" type="retro">
+                <figure xml:id="retrocart">
+                    <graphic url="./cartoline/7694-039R.jpg " />
+                </figure>
                 <div xml:id="lato_sinistro" facs="#ls">
                     <div facs="#altosx" type="code">
                         <p>
@@ -193,7 +197,7 @@
                     </div>
                     <div facs="#msg" type="message">
                         <p>
-                            <lb />                                                                                                                                                                                                                                      
+                            <lb />
                             <date type="writing">
                                 <num>16</num>
                                 <pc>-</pc>
@@ -292,4 +296,4 @@
         <!--retro-->
         <surface xml:id="retro39"></surface>
     </facsimile>
-</TEI>
+</teiCorpus>
