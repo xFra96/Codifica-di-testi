@@ -60,7 +60,6 @@
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
-                    <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
@@ -73,7 +72,7 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">[Donna in giallo in posa]</title>
-                    <author>Mauzan</author>
+                    <author></author>
                     <date when="1917">1917</date>
                 </bibl>
                 <msDesc>
