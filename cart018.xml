@@ -31,7 +31,7 @@
                 <!-- NOME COMPILATORE -->
                 <respStmt>
                     <resp>encoding by</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name xml:id="TC">Tommaso Castagneto</name>
                     <name ref="#FS">Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
@@ -60,7 +60,6 @@
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
-                    <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
@@ -73,7 +72,7 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
-                    <author xml:id="TC">Tommaso Cascella</author>
+                    <author></author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>

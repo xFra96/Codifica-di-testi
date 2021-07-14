@@ -64,7 +64,7 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul retro riporta la stampa “Proprietà artistica riservata n  202-1” e la stampa “VERIFICATO PER CENSURA”</note>
+                <note n="1.1">Sul retro riporta la stampa “Proprietà artistica riservata n  202-1”   `</note>
             </notesStmt>
             <sourceDesc>
                 <bibl>
@@ -176,15 +176,15 @@
     <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
-            <div type="fronte">
-                <figure xml:id="frontecart">
-                    <graphic url="./cartoline/7694-039F.jpg " />
-                    <figDesc></figDesc>
+            <div xml:id="fronte" type="fronte">
+                <figure>
+                    <graphic xml:id="fronteimg" url="./cartoline/7694-039F.jpg " />
+                    <figDesc>Viene riportata l' immagine di una donna vestita di giallo con un cappello da marinaio. Nella parte bassa, sulla destra, è presente la firma dell'autore dell'opera ovvero Mauzan</figDesc>
                 </figure>
             </div>
-            <div facs="#retro18" type="retro">
-                <figure xml:id="retrocart">
-                    <graphic url="./cartoline/7694-039R.jpg " />
+            <div xml:id="retrocart" type="retro">
+                <figure>
+                    <graphic xml:id="retroimg" url="./cartoline/7694-039R.jpg " />
                 </figure>
                 <div xml:id="lato_sinistro" facs="#ls">
                     <div facs="#altosx" type="code">

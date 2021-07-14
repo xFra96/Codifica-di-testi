@@ -1,7 +1,14 @@
+section{
+    padding: 20px 0px;
+}
 .cartolina {
     max-height: 500px;
     width: auto;
     display: block;
     margin: 0px auto 10px;
-    max-width: 100%;
+}
+.nota{
+    color: #0d6efd;
+    margin-left: 10px;
+    font-size: 17px;
 }

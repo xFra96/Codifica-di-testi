@@ -10,7 +10,7 @@
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name>
+                    <name xml:id="FS">
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -21,7 +21,6 @@
                     <name type="comune" xml:id="SP">Comune della Spezia</name>
                 </respStmt>
             </titleStmt>
-
             <editionStmt>
                 <edition>
                     Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
@@ -32,7 +31,7 @@
                 <!-- NOME COMPILATORE -->
                 <respStmt>
                     <resp>encoding by</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name xml:id="TC">Tommaso Castagneto</name>
                     <name ref="#FS">Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
@@ -51,7 +50,6 @@
                     <name xml:id="MR">Marzia Ratti</name>
                 </respStmt>
             </editionStmt>
-
             <publicationStmt>
                 <publisher>Unipi</publisher>
                 <pubPlace>Pisa</pubPlace>
@@ -62,7 +60,6 @@
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
-                    <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
@@ -217,9 +214,9 @@
     <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
-            <div type="fronte">
+            <div xml:id="frontecart" type="fronte">
                 <figure>
-                    <graphic url="./cartoline/7694-017F.jpg" />
+                    <graphic xml:id="fronteimg" url="./cartoline/7694-017F.jpg" />
                     <figDesc>Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di un dipinto del fiume Adige, fatto dal pittore Tommaso Cascella.
                         I colori sono sbiaditi a causa probabilmente dell'usura del tempo, che si nota molto anche nei bordi della cartolina e nel retro, tuttavia l'immagine risulta ancora nitida e non troppo rovinata in quanto si riescono a distinguere i vari elementi del paesaggio.
                     Troviamo infatti al centro il fiume Adige con ai lati due pareti montouse che si innalzano; sulla destra si può notare una carovana che si sta spostando verso i ponti per attraversare il corso d'acqua.
@@ -227,7 +224,10 @@
                     <head>L'Adige (verso Chizzola) - Tommaso Cascella</head>
                 </figure>
             </div>
-            <div facs="#retro17" type="retro">
+            <div xml:id="retrocart" facs="#retro17" type="retro">
+                <figure>
+                    <graphic xml:id="retroimg" url="./cartoline/7694-017R.jpg " />
+                </figure>
                 <div xml:id="lato_sinistro" facs="#ls">
                     <div facs="#angolosx" type="code">
                         <p>
@@ -400,7 +400,7 @@
     </text>
     <facsimile>
         <!--retro-->
-        <surface xml:id="retro17">
+        <surface xml:id="back">
             <graphic url='./cartoline/7694-017R.jpg' width='1642px' height='1055px' />
             <!-- Lati destro e sinistro-->
             <zone xml:id="ls" ulx="12" uly="10" lrx="665" lry="1040" />
