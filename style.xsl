@@ -12,7 +12,6 @@
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
                 <link href="./assets/FA-all.css" rel="stylesheet" type="text/css" />
                 <link href="./assets/custom.css" rel="stylesheet" type="text/css" />
-                <meta charset="UTF-8" />
                 <title>
                     <xsl:value-of select="tei:teiCorpus//tei:fileDesc/tei:titleStmt/tei:title" />
                 </title>
@@ -21,7 +20,7 @@
                 <!-- parte introduttiva -->
                 <header>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="container-fluid">
+                        <div class="container-lg-fluid">
                             <a class="navbar-brand" href="./main.xml">HOMEPAGE</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -44,22 +43,22 @@
                 </header>
 
                 <section>
-                    <div class="container">
+                    <div class="container-lg">
                         <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart17']" />
                     </div>
                 </section>
                 <section>
-                    <div class="container">
+                    <div class="container-lg">
                         <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart18']" />
                     </div>
                 </section>
                 <section>
-                    <div class="container">
+                    <div class="container-lg">
                         <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart39']" />
                     </div>
                 </section>
                 <section>
-                    <div class="container">
+                    <div class="container-lg">
                         <xsl:apply-templates select="//tei:teiCorpus/tei:teiHeader[@xml:id='main']" />
                     </div>
                 </section>
@@ -77,18 +76,18 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='fronteimg']" />
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='frontecart']" />
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='retroimg']" />
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='retrocart']" />
             </div>
         </div>
@@ -303,18 +302,12 @@
 
     <xsl:template match="tei:unclear">
         <xsl:if test="@reason='illegible'">
-            <xsl:element name="span">
+            <span type="button" class="nota" data-bs-container-lg="body" data-bs-trigger="hover focus" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Note">
                 <xsl:attribute name="data-bs-content">
                     <xsl:value-of select="." />
                 </xsl:attribute>
-                <xsl:attribute name="type">button</xsl:attribute>
-                <xsl:attribute name="class">nota</xsl:attribute>
-                <xsl:attribute name="data-bs-container">body</xsl:attribute>
-                <xsl:attribute name="data-bs-toggle">popover</xsl:attribute>
-                <xsl:attribute name="data-bs-placement">right</xsl:attribute>
-                <xsl:attribute name="data-bs-title">Note</xsl:attribute>
                 <i class="fas fa-comment"></i>
-            </xsl:element>
+            </span>
         </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

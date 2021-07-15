@@ -1,14 +1,22 @@
-section{
+section {
     padding: 20px 0px;
+    width: 100%;
 }
+
 .cartolina {
     max-height: 500px;
     width: auto;
     display: block;
     margin: 0px auto 10px;
 }
-.nota{
+
+.nota {
     color: #0d6efd;
-    margin-left: 10px;
     font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 3rem !important;
+    }
 }

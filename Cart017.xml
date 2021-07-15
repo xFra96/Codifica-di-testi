@@ -291,7 +291,7 @@
                     </div>
                 </div>
                 <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#alto" type="message">
+                    <div facs="#alto">
                         <p>
                             <lb />
                             <w>Cartolina</w>
