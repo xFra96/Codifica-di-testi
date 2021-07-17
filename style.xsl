@@ -3,9 +3,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns="http://www.w3.org/1999/xhtml">
-
     <xsl:output method="html" indent="yes" />
-
+    
     <!-- PAGE STRUCTURE  -->
     <xsl:template match="/">
         <html>
@@ -262,6 +261,7 @@
 
     <!-- Fronte Cart -->
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='fronte']">
+        <h4>Descrizione</h4>
         <p>
             <xsl:value-of select="//tei:figure/tei:figDesc" />
         </p>
@@ -343,4 +343,5 @@
             </span>
         </xsl:if>
     </xsl:template>
+
 </xsl:stylesheet>
