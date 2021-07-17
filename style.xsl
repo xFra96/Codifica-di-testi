@@ -6,11 +6,13 @@
 
     <xsl:output method="html" indent="yes" />
 
+    <!-- PAGE STRUCTURE  -->
     <xsl:template match="/">
         <html>
             <head>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
                 <link href="./assets/FA-all.css" rel="stylesheet" type="text/css" />
+                <link href="./assets/lightbox.css" rel="stylesheet" type="text/css" />
                 <link href="./assets/custom.css" rel="stylesheet" type="text/css" />
                 <title>
                     <xsl:value-of select="tei:teiCorpus//tei:fileDesc/tei:titleStmt/tei:title" />
@@ -64,11 +66,12 @@
                 </section>
             </body>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <script src="./assets/lightbox-plus-jquery.js"></script>
             <script src="./assets/custom.js"></script>
         </html>
     </xsl:template>
 
-    <!-- PAGE STRUCTURE  -->
+    <!-- TEI CORPUS STRUCTURE  -->
     <xsl:template match="tei:teiCorpus[@xml:id='cart17' or @xml:id='cart18' or @xml:id='cart39']">
         <div class="row mt-3">
             <div class="col-md-12">
@@ -91,35 +94,27 @@
                 <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='retrocart']" />
             </div>
         </div>
-
-    </xsl:template>
-
-    <!-- Main page -->
-    <xsl:template match="tei:teiHeader[@xml:id='main']">
-        <div class="row text-center">
-            <h1>
-                <i>
-                    <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:title" />
-                </i>
-            </h1>
-            <h6>
-                <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:respStmt" />
-            </h6>
-        </div>
     </xsl:template>
 
     <!-- TEI Header -->
     <xsl:template match="tei:teiHeader">
-        <div class="row text-center">
-            <h1>
-                <i>
-                    <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:title" />
-                </i>
-            </h1>
-            <h6>
-                <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:respStmt" />
-            </h6>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>
+                    <i>
+                        <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:title" />
+                    </i>
+                </h1>
+                <h6>
+                    <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:respStmt" />
+                </h6>
+            </div>
         </div>
+        <xsl:call-template name="renderInfoCodifica"/>
+    </xsl:template>
+
+    <!-- Info -->
+    <xsl:template name="renderInfoCodifica">
         <div class="row pt-5">
             <div class="col-md-12 pb-4">
                 <a class="" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
@@ -274,22 +269,45 @@
 
     <!-- Immagine fronte e retro-->
     <xsl:template match="tei:figure/tei:graphic">
-        <img class="cartolina img-fluid " src="{@url}" />
-        <xsl:apply-templates select="/tei:facsimile" />
+        <a href="{@url}" data-lightbox="cartolina">
+            <img class="cartolina img-fluid " src="{@url}" usemap="#cartback">
+                <xsl:if test="@xml:id='retroimg'">
+                    <xsl:attribute name="width">
+                        <xsl:value-of select="/tei:teiCorpus/tei:facsimile/tei:surface[@xml:id='back']/tei:graphic/@width" />
+                    </xsl:attribute>
+                    <xsl:attribute name="height">
+                        <xsl:value-of select="/tei:teiCorpus/tei:facsimile/tei:surface[@xml:id='back']/tei:graphic/@height" />
+                    </xsl:attribute>
+                </xsl:if>
+            </img>
+            <xsl:if test="@xml:id='retroimg'">
+                <xsl:apply-templates select="/tei:teiCorpus/tei:facsimile" />
+            </xsl:if>
+        </a>
     </xsl:template>
 
     <!-- Immagine fronte e retro-->
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
+                <h2 class="accordion-header" id="acc1">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#msg" aria-expanded="false" aria-controls="msg">
                         Messaggio
                     </button>
                 </h2>
-                <div id="msg" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div id="msg" class="accordion-collapse collapse" aria-labelledby="acc1" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                    </div>
+                </div>
+                <h2 class="accordion-header" id="acc2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addr" aria-expanded="false" aria-controls="addr">
+                        Indirizzo ricevente
+                    </button>
+                </h2>
+                <div id="addr" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
                     </div>
                 </div>
             </div>
@@ -298,6 +316,21 @@
 
     <xsl:template match="tei:lb">
         <br />
+    </xsl:template>
+
+    <xsl:template match="tei:facsimile">
+        <map name="cartback">
+            <xsl:for-each select="//tei:surface/tei:zone">
+                <area class="zona" shape="poly" id="{@xml:id}" href="#">
+                    <xsl:attribute name="coords">
+                        <xsl:value-of select="@ulx" />
+,                        <xsl:value-of select="@uly" />
+,                        <xsl:value-of select="@lrx" />
+,                        <xsl:value-of select="@lry" />
+                    </xsl:attribute>
+                </area>
+            </xsl:for-each>
+        </map>
     </xsl:template>
 
     <xsl:template match="tei:unclear">

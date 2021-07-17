@@ -242,7 +242,6 @@
                     </div>
                     <div facs="#msg" type="message">
                         <p>
-                            <lb />
                             <date type="writing">
                                 <num>16</num>
                                 <pc>-</pc>
@@ -293,7 +292,6 @@
                 <div xml:id="lato_destro" facs="#ld">
                     <div facs="#alto">
                         <p>
-                            <lb />
                             <w>Cartolina</w>
                             <w>Postale</w>
                             <w>Commemorativa</w>
@@ -364,7 +362,6 @@
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
-                            <lb />
                             <w>Al</w>
                             <abbr type="title">Signor</abbr>
                             <lb />
@@ -401,10 +398,10 @@
     <facsimile>
         <!--retro-->
         <surface xml:id="back">
-            <graphic url='./cartoline/7694-017R.jpg' width='1642px' height='1055px' />
-            <!-- Lati destro e sinistro-->
+            <graphic url='./cartoline/7694-017R.jpg' width='1642' height='1055' />
+            <!-- Lati destro e sinistro
             <zone xml:id="ls" ulx="12" uly="10" lrx="665" lry="1040" />
-            <zone xml:id="ld" ulx="649" uly="9" lrx="1618" lry="1033" />
+            <zone xml:id="ld" ulx="649" uly="9" lrx="1618" lry="1033" />-->
             <!-- Lato destro -->
             <zone xml:id="org" ulx="674" uly="10" lrx="1614" lry="189" />
             <zone xml:id="timbri" ulx="674" uly="193" lrx="1622" lry="582" />
