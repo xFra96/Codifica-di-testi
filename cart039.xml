@@ -72,7 +72,7 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">[Donna in giallo in posa]</title>
-                    <author></author>
+                    <author>Mauzan</author>
                     <date when="1917">1917</date>
                 </bibl>
                 <msDesc>
@@ -176,7 +176,7 @@
     <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
-            <div xml:id="fronte" type="fronte">
+            <div xml:id="frontecart" type="fronte">
                 <figure>
                     <graphic xml:id="fronteimg" url="./cartoline/7694-039F.jpg " />
                     <figDesc>Viene riportata l' immagine di una donna vestita di giallo con un cappello da marinaio. Nella parte bassa, sulla destra, è presente la firma dell'autore dell'opera ovvero Mauzan</figDesc>

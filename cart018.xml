@@ -64,7 +64,7 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul retro si nota la firma dell'artista del quadro riportato sul fronte della cartolina, si tratta di T. Cascella che viene accostato al nome dell'opera "Avanscoperta (dall'altipiano Carsico)"</note>
+                <note n="1.1">Sul retro si nota il riferimento all'artista del quadro riportato sul fronte della cartolina, Tommaso Cascella"</note>
             </notesStmt>
             <sourceDesc>
                 <bibl>
@@ -72,7 +72,7 @@
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
-                    <author></author>
+                    <author>Tommaso Cascella</author>
                     <publisher xml:id="CR">Croce Rossa</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>
@@ -184,14 +184,17 @@
     <text type="cartolina" xml:id="cart018">
         <!-- TRASCRIZIONE -->
         <body>
-            <div type="fronte">
+            <div xml:id="frontecart" type="fronte">
                 <figure>
-                    <graphic url="" />
-                    <figDesc></figDesc>
-                    <head></head>
+                    <graphic xml:id="fronteimg" url="./cartoline/7694-018F.jpg" />
+                    <figDesc>Sono rappresentati due soldati di spalle, uno a cavallo e uno a terra che, con una mano, tiene le briglie mentre con l' altra regge probabilmente un binocolo nel tentativo di scorgere la vallata che si para davanti</figDesc>
+                    <head>Avanscoperta (dall'altipiano carsico)</head>
                 </figure>
             </div>
-            <div facs="#retro18" type="retro">
+            <div xml:id="retrocart" facs="#retro18" type="retro">
+                <figure>
+                    <graphic xml:id="retroimg" url="./cartoline/7694-018R.jpg" />
+                </figure>
                 <div xml:id="lato_sinistro" facs="#ls">
                     <div facs="#altosx" type="code">
                         <p>
@@ -282,7 +285,7 @@
                         <p>
                             <w>All</w>
                             <pc>'</pc>
-                            <unclear>
+                            <unclear reason="illegible">
                                 <w>
                                     <note>Non si capisce bene la seconda parola</note>
                                 </w>

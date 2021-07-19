@@ -1,82 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns="http://www.w3.org/1999/xhtml">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml">
     <xsl:output method="html" indent="yes" />
-    
+
     <!-- PAGE STRUCTURE  -->
     <xsl:template match="/">
         <html>
             <head>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-                <link href="./assets/FA-all.css" rel="stylesheet" type="text/css" />
-                <link href="./assets/lightbox.css" rel="stylesheet" type="text/css" />
-                <link href="./assets/custom.css" rel="stylesheet" type="text/css" />
+                <meta charset="UTF-8" />
+                <meta name="description" content="Esame Codifica di Testi" />
+                <meta name="keywords" content="Codifica di Testi, XML, XSL, Unipi" />
+                <meta name="author" content="Francesco Spagnoli" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>
                     <xsl:value-of select="tei:teiCorpus//tei:fileDesc/tei:titleStmt/tei:title" />
                 </title>
+                <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+                <link href="./assets/css/FA-all.css" rel="stylesheet" type="text/css" />
+                <link href="./assets/css/lightbox.css" rel="stylesheet" type="text/css" />
+                <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
                 <!-- parte introduttiva -->
-                <header>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="container-lg-fluid">
-                            <a class="navbar-brand" href="./main.xml">HOMEPAGE</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="./cart017.xml">Cartolina 17</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="./cart018.xml">Cartolina 18</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="./cart039.xml">Cartolina 39</a>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="container-lg">
+                    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                        <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                            HOME
+                        </a>
+                        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link px-2 link-dark" href="./cart017.xml">Cartolina 17</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 link-dark" href="./cart018.xml">Cartolina 18</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 link-dark" href="./cart039.xml">Cartolina 39</a>
+                            </li>
+                        </ul>
+                        <div class="col-md-3 text-end">
+                            <a href="https://github.com/xFra96/CDT" target="_blank" class="btn btn-outline-primary me-2">GitHub Repo</a>
                         </div>
-                    </nav>
-                </header>
-
+                    </header>
+                </div>
                 <section>
                     <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart17']" />
+                        <xsl:apply-templates select="//tei:teiHeader" />
                     </div>
                 </section>
                 <section>
                     <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart18']" />
-                    </div>
-                </section>
-                <section>
-                    <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiCorpus[@xml:id='cart39']" />
-                    </div>
-                </section>
-                <section>
-                    <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiCorpus/tei:teiHeader[@xml:id='main']" />
+                        <xsl:apply-templates select="//tei:teiCorpus/tei:text[@type='cartolina']" />
                     </div>
                 </section>
             </body>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-            <script src="./assets/lightbox-plus-jquery.js"></script>
-            <script src="./assets/custom.js"></script>
+            <script src="./assets/js/lightbox-plus-jquery.js"></script>
+            <script src="./assets/js/custom.js"></script>
         </html>
     </xsl:template>
 
     <!-- TEI CORPUS STRUCTURE  -->
-    <xsl:template match="tei:teiCorpus[@xml:id='cart17' or @xml:id='cart18' or @xml:id='cart39']">
-        <div class="row mt-3">
-            <div class="col-md-12">
-                <xsl:apply-templates select="//tei:teiHeader" />
-            </div>
-        </div>
+    <xsl:template match="tei:teiCorpus/tei:text[@type='cartolina']">
         <div class="row mt-3">
             <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='fronteimg']" />
@@ -109,7 +93,9 @@
                 </h6>
             </div>
         </div>
-        <xsl:call-template name="renderInfoCodifica"/>
+        <xsl:if test="/tei:teiCorpus[@xml:id='cart39' or @xml:id='cart17' or @xml:id='cart18']">
+            <xsl:call-template name="renderInfoCodifica" />
+        </xsl:if>
     </xsl:template>
 
     <!-- Info -->
@@ -259,15 +245,7 @@
         </table>
     </xsl:template>
 
-    <!-- Fronte Cart -->
-    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='fronte']">
-        <h4>Descrizione</h4>
-        <p>
-            <xsl:value-of select="//tei:figure/tei:figDesc" />
-        </p>
-    </xsl:template>
-
-    <!-- Immagine fronte e retro-->
+    <!-- Immagine fronte e retro -->
     <xsl:template match="tei:figure/tei:graphic">
         <a href="{@url}" data-lightbox="cartolina">
             <img class="cartolina img-fluid " src="{@url}" usemap="#cartback">
@@ -286,7 +264,15 @@
         </a>
     </xsl:template>
 
-    <!-- Immagine fronte e retro-->
+    <!-- Front Text -->
+    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='fronte']">
+        <h4>Descrizione</h4>
+        <p>
+            <xsl:value-of select="//tei:figure/tei:figDesc" />
+        </p>
+    </xsl:template>
+
+    <!-- Retro Text -->
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -324,9 +310,12 @@
                 <area class="zona" shape="poly" id="{@xml:id}" href="#">
                     <xsl:attribute name="coords">
                         <xsl:value-of select="@ulx" />
-,                        <xsl:value-of select="@uly" />
-,                        <xsl:value-of select="@lrx" />
-,                        <xsl:value-of select="@lry" />
+                        ,
+                        <xsl:value-of select="@uly" />
+                        ,
+                        <xsl:value-of select="@lrx" />
+                        ,
+                        <xsl:value-of select="@lry" />
                     </xsl:attribute>
                 </area>
             </xsl:for-each>
