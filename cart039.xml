@@ -291,8 +291,4 @@
             </div>
         </body>
     </text>
-    <facsimile>
-        <!--retro-->
-        <surface xml:id="retro39"></surface>
-    </facsimile>
 </teiCorpus>

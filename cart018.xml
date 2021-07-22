@@ -73,7 +73,7 @@
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
                     <author>Tommaso Cascella</author>
-                    <publisher xml:id="CR">Croce Rossa</publisher>
+                    <publisher xml:id="CR">Croce Rossa Italiana</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>
                 </bibl>
@@ -119,15 +119,16 @@
                 </msDesc>
                 <!-- LUOGHI -->
                 <listPlace>
-                    <place xml:id="VGR">
+                    <place>
                         <placeName>Via Girolamo Rossi</placeName>
                         <settlement type="località">Ravenna</settlement>
                         <district type="provincia">RV</district>
                         <country key="IT">IT</country>
                         <note>Indirizzo ricevente</note>
                     </place>
-                    <place xml:id="FO">
+                    <place>
                         <placeName>Formica</placeName>
+                        <settlement type="località">Modena</settlement>
                         <district type="provincia">MO</district>
                         <country key="IT">IT</country>
                         <note>Località mittente</note>
@@ -324,8 +325,4 @@
             </div>
         </body>
     </text>
-    <facsimile>
-        <!--retro-->
-        <surface xml:id="retro18"></surface>
-    </facsimile>
 </teiCorpus>

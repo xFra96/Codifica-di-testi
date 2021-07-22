@@ -123,14 +123,7 @@
 
                 <!-- LUOGHI -->
                 <listPlace>
-                    <place xml:id="CZ">
-                        <placeName>Chizzola</placeName>
-                        <settlement type="località">Chizzola</settlement>
-                        <district type="provincia">TN</district>
-                        <country key="IT">IT</country>
-                        <note>Foto scattata nelle vicinanze della città</note>
-                    </place>
-                    <place xml:id="VGR">
+                    <place>
                         <placeName>Via Girolamo Rossi</placeName>
                         <settlement type="località">Ravenna</settlement>
                         <district type="provincia">RV</district>
@@ -395,21 +388,4 @@
             </div>
         </body>
     </text>
-    <facsimile>
-        <!--retro-->
-        <surface xml:id="back">
-            <graphic url='./cartoline/7694-017R.jpg' width='1642' height='1055' />
-            <!-- Lati destro e sinistro
-            <zone xml:id="ls" ulx="12" uly="10" lrx="665" lry="1040" />
-            <zone xml:id="ld" ulx="649" uly="9" lrx="1618" lry="1033" />-->
-            <!-- Lato destro -->
-            <zone xml:id="org" ulx="674" uly="10" lrx="1614" lry="189" />
-            <zone xml:id="timbri" ulx="674" uly="193" lrx="1622" lry="582" />
-            <zone xml:id="ricevente" ulx="676" uly="593" lrx="1621" lry="1041" />
-            <!-- Lato sinistro -->
-            <zone xml:id="angolosx" ulx="11" uly="9" lrx="325" lry="300" />
-            <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802" />
-            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" />
-        </surface>
-    </facsimile>
 </teiCorpus>
