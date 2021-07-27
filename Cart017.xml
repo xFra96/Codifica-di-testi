@@ -135,7 +135,7 @@
                 <!-- NOMI -->
                 <listPerson>
                     <person>
-                        <persName ref="#TG">
+                        <persName>
                             <forename>Giuseppe</forename>
                             <surname>Turtura</surname>
                         </persName>
@@ -144,7 +144,7 @@
                         <note>Ricevente</note>
                     </person>
                     <person>
-                        <persName ref="#BR">
+                        <persName>
                             <forename>Romeo</forename>
                             <surname>Benelli</surname>
                         </persName>
@@ -388,4 +388,23 @@
             </div>
         </body>
     </text>
+    <facsimile>
+        <!--retro-->
+        <surface type="retro">
+            <graphic url='./cartoline/7694-017R.jpg' width='1642px' height='1055px' />
+            <!-- Lato destro -->
+            <zone xml:id="timbri" ulx="674" uly="193" lrx="1622" lry="582">
+                <graphic url='./cartoline/zone/17-timbri.jpg' />
+            </zone>
+            <zone xml:id="ricevente" ulx="676" uly="593" lrx="1621" lry="1041">
+                <graphic url='./cartoline/zone/17-ricevente.jpg' />
+            </zone>
+            <!-- Lato sinistro -->
+            <zone xml:id="angolosx" ulx="11" uly="9" lrx="325" lry="300" />
+            <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802">
+                <graphic url='./cartoline/zone/17-msg.jpg' />
+            </zone>
+            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" />
+        </surface>
+    </facsimile>
 </teiCorpus>

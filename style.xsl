@@ -20,41 +20,42 @@
                 <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
-                <!-- parte introduttiva -->
-                <div class="container-lg">
-                    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                        <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <div class="main-wrapper shadow">
+                    <div class="container-lg">
+                        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                            <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                             HOME
                         </a>
-                        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link px-2 link-dark" href="./cart017.xml">Cartolina 17</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link px-2 link-dark" href="./cart018.xml">Cartolina 18</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link px-2 link-dark" href="./cart039.xml">Cartolina 39</a>
-                            </li>
-                        </ul>
-                        <div class="col-md-3 text-end">
-                            <a href="https://github.com/xFra96/CDT" target="_blank" class="btn btn-outline-primary me-2">GitHub Repo</a>
+                            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 link-dark" href="./cart017.xml">Cartolina 17</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 link-dark" href="./cart018.xml">Cartolina 18</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-2 link-dark" href="./cart039.xml">Cartolina 39</a>
+                                </li>
+                            </ul>
+                            <div class="col-md-3 text-end">
+                                <a href="https://github.com/xFra96/CDT" target="_blank" class="btn btn-outline-primary me-2">GitHub Repo</a>
+                            </div>
+                        </header>
+                    </div>
+                    <section>
+                        <div class="container-lg">
+                            <xsl:apply-templates select="//tei:teiHeader" />
                         </div>
-                    </header>
+                    </section>
+                    <section>
+                        <div class="container-lg">
+                            <xsl:apply-templates select="//tei:teiCorpus/tei:text[@type='cartolina']" />
+                        </div>
+                        <div class="container-lg">
+                            <xsl:call-template name="renderInfoProgetto" />
+                        </div>
+                    </section>
                 </div>
-                <section>
-                    <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiHeader" />
-                    </div>
-                </section>
-                <section>
-                    <div class="container-lg">
-                        <xsl:apply-templates select="//tei:teiCorpus/tei:text[@type='cartolina']" />
-                    </div>
-                    <div class="container-lg">
-                        <xsl:call-template name="renderInfoProgetto" />
-                    </div>
-                </section>
             </body>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
             <script src="./assets/js/lightbox-plus-jquery.js"></script>
@@ -73,10 +74,10 @@
             </div>
         </div>
         <div class="row mt-3">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='retroimg']" />
             </div>
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='retrocart']" />
             </div>
         </div>
@@ -278,42 +279,83 @@
     </xsl:template>
 
     <!-- Immagine fronte e retro -->
-    <xsl:template match="tei:figure/tei:graphic">
-        <a href="{@url}" data-lightbox="cartolina">
-            <img class="cartolina img-fluid " src="{@url}" />
+    <xsl:template match="tei:graphic">
+        <a href="{@url}" data-lightbox="cartolina" class="">
+            <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{@url}" />
         </a>
     </xsl:template>
 
     <!-- Front Text -->
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='fronte']">
-        <h4>Descrizione</h4>
-        <p>
-            <xsl:value-of select="//tei:figure/tei:figDesc" />
-        </p>
+        <div class="px-3 py-2">
+            <h4>Descrizione</h4>
+            <p>
+                <xsl:value-of select="//tei:figure/tei:figDesc" />
+            </p>
+        </div>
+
     </xsl:template>
 
     <!-- Retro Text -->
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="acc1">
+        <div class="container">
+            <div class="accordion accordion-flush" id="accordionGroup">
+
+                <div class="accordion-item">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#msg" aria-expanded="false" aria-controls="msg">
-                        Messaggio
+                        <h5 class="accordion-header" id="acc1">Messaggio</h5>
                     </button>
-                </h2>
-                <div id="msg" class="accordion-collapse collapse" aria-labelledby="acc1" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                    <div id="msg" class="accordion-collapse collapse" aria-labelledby="acc1" data-bs-parent="#accordionGroup">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <xsl:apply-templates select="//tei:zone[@xml:id='msg']" />
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                        <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <h2 class="accordion-header" id="acc2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addr" aria-expanded="false" aria-controls="addr">
-                        Indirizzo ricevente
-                    </button>
-                </h2>
-                <div id="addr" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#timbri" aria-expanded="false" aria-controls="timbri">
+                            <h5 class="accordion-header" id="acc2">Parte superiore lato destro</h5>
+                        </button>
+                        <div id="timbri" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
+                            <div class="accordion-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <xsl:apply-templates select="//tei:zone[@xml:id='timbri']" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p>
+                                            <xsl:apply-templates select="//tei:div/tei:div[@type='marks']" />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addr" aria-expanded="false" aria-controls="addr">
+                            <h5 class="accordion-header" id="acc2">Indirizzo ricevente</h5>
+                        </button>
+                        <div id="addr" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
+                            <div class="accordion-body container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <xsl:apply-templates select="//tei:zone[@xml:id='ricevente']" />
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p>
+                                            <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
