@@ -322,7 +322,7 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <p>
-                                                <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                                                <xsl:apply-templates select="//tei:div/tei:div[@facs='#altosx']" />
                                             </p>
                                         </div>
                                     </div>
@@ -355,8 +355,11 @@
                             <div id="artist" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
                                 <div class="accordion-body">
                                     <div class="row">
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-6">
                                             <xsl:apply-templates select="//tei:zone[@xml:id='artist']" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <xsl:apply-templates select="//tei:div[@facs='#artist']" />
                                         </div>
                                     </div>
                                 </div>
@@ -409,19 +412,33 @@
         </div>
     </xsl:template>
 
+    <xsl:template match="tei:phr">
+        <p>
+            <xsl:value-of select="." />
+        </p>
+    </xsl:template>
+
     <xsl:template match="tei:lb">
         <br />
     </xsl:template>
 
     <xsl:template match="tei:unclear">
-        <xsl:if test="@reason='illegible'">
+        <xsl:if test="@reason='illegible' or @reason='faded' or not(@reason)">
             <span type="button" class="nota" data-bs-container-lg="body" data-bs-trigger="hover focus" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Note">
                 <xsl:attribute name="data-bs-content">
                     <xsl:value-of select="." />
                 </xsl:attribute>
-                <i class="fas fa-comment"></i>
+                <i class="fas fa-info mx-1"></i>
             </span>
         </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="tei:stamp">
+        <div class="alert alert-success" role="alert">
+            <i class="fas fa-stamp"></i>
+            -
+            <xsl:apply-templates />
+        </div>
     </xsl:template>
 
     <xsl:template match="tei:listPlace">
@@ -440,6 +457,13 @@
                 ]
             </p>
         </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="tei:figure[@type='logo']">
+        <div class="alert alert-warning" role="alert">
+            <i class="fas fa-file-image"></i>
+            -  <xsl:value-of select="." />
+        </div>
     </xsl:template>
 
     <xsl:template match="tei:listPerson">

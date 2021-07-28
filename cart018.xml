@@ -215,25 +215,31 @@
                     </div>
                     <div facs="#msg" type="message">
                         <p>
-                            <lb />
                             <unclear reason="illegible">
                                 <phr>
                                     <note>Viene riportato dal mittente probabilmente un saluto</note>
                                 </phr>
                             </unclear>
+                            <phr>
+                                <placeName>Formica</placeName>
+                                <date type="writing" when="1915-09-2">
+                                    2
+                                    <abbr type="contraction">
+                                        Sett
+                                        <pc>.</pc>
+                                    </abbr>
+                                    1915
+                                </date>
+                            </phr>
                         </p>
                     </div>
-                    <div facs="#mittente" type="sender">
-                        <p>
-                            <placeName>Formica</placeName>
-                            <date type="writing" when="1915-09-2">2 Settembre 1915</date>
-                        </p>
+                    <div facs='#artist'>
+                        <p>Riferimento alla proprietà e/o al titolo dell' opera</p>
                     </div>
                 </div>
-                <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#altodx" type="message">
+                <div xml:id="lato_destro">
+                    <div facs="#altodx">
                         <p>
-                            <lb />
                             <w>Cartolina</w>
                             <w>Postale</w>
                             <w>Commemorativa</w>
@@ -257,10 +263,6 @@
                                     na
                                 </w>
                             </abbr>
-                        </p>
-                    </div>
-                    <div facs="#timbri" type="marks">
-                        <p>
                             <phr>
                                 <lb />
                                 <w>Edizione</w>
@@ -277,7 +279,7 @@
                                 </distinct>
                                 <w>beneficio</w>
                             </phr>
-                            <figure>
+                            <figure type="logo">
                                 <figDesc>Si distingue nitidamente il logo della croce rossa, contornata da una cornice. L'area del francobollo è vuota</figDesc>
                             </figure>
                         </p>

@@ -222,15 +222,17 @@
                     <graphic xml:id="retroimg" url="./cartoline/7694-017R.jpg " />
                 </figure>
                 <div xml:id="lato_sinistro" facs="#ls">
-                    <div facs="#angolosx" type="code">
+                    <div facs="#altosx" type="code">
                         <p>
                             <num type="cardinal">
                                 <idno> 17 </idno>
                             </num>
-                            <unclear reason="faded">
-                                <stamp type="mark" />
-                                <note>Sotto al numero 17 compare un timbro illeggibile, probabilmente della croce rossa, dato che sembra intravedersi un simbolo simile</note>
-                            </unclear>
+                            <stamp type="mark">
+                                <unclear reason="faded">
+
+                                    <note>Sotto al numero 17 compare un timbro illeggibile, probabilmente della croce rossa, dato che sembra intravedersi un simbolo simile</note>
+                                </unclear>
+                            </stamp>
                         </p>
                     </div>
                     <div facs="#msg" type="message">
@@ -281,34 +283,35 @@
                             </placeName>
                         </p>
                     </div>
+                    <div facs='#artist'>
+                        <p>Riferimento alla proprietà e/o al titolo dell' opera</p>
+                    </div>
                 </div>
                 <div xml:id="lato_destro" facs="#ld">
                     <div facs='#altodx'>
-                        <div facs="#alto">
-                            <p>
-                                <w>Cartolina</w>
-                                <w>Postale</w>
-                                <w>Commemorativa</w>
-                                <lb />
-                                <w>Della</w>
-                                <distinct type="roman">
-                                    V
-                                    <pc>.</pc>
-                                </distinct>
-                                <distinct type="latin">
-                                    <w>Gverra</w>
-                                </distinct>
-                                <w>per</w>
-                                <w>l</w>
-                                <pc>'</pc>
-                                <w>indipendenza</w>
-                                <unclear>
-                                    <w>
-                                        <note>Ultima parola non leggibile, si presuppone sia Italia</note>
-                                    </w>
-                                </unclear>
-                            </p>
-                        </div>
+                        <p>
+                            <w>Cartolina</w>
+                            <w>Postale</w>
+                            <w>Commemorativa</w>
+                            <lb />
+                            <w>Della</w>
+                            <distinct type="roman">
+                                V
+                                <pc>.</pc>
+                            </distinct>
+                            <distinct type="latin">
+                                <w>Gverra</w>
+                            </distinct>
+                            <w>per</w>
+                            <w>l</w>
+                            <pc>'</pc>
+                            <w>indipendenza</w>
+                            <unclear>
+                                <w>
+                                    <note>Ultima parola non leggibile perchè coperta dal timbro</note>
+                                </w>
+                            </unclear>
+                        </p>
                         <div type="marks">
                             <p>
                                 <!-- stamps -->
@@ -341,54 +344,55 @@
                                     <lb />
                                     <w>beneficio</w>
                                 </phr>
-                                <unclear reason="faded">
-                                    <stamp type="postmark">
+
+                                <stamp type="postmark">
+                                    <unclear reason="faded">
                                         <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
-                                    </stamp>
-                                </unclear>
-                                <figure>
+                                    </unclear>
+                                </stamp>
+
+                                <figure type="logo">
                                     <figDesc>
-                             Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo il Francobollo e l'altra frase
-                            </figDesc>
+                                    Si distingue nitidamente il logo della croce rossa
+                                    </figDesc>
                                 </figure>
                                 <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                             </p>
                         </div>
                     </div>
-
-                </div>
-                <div facs="#ricevente" type="destination">
-                    <p>
-                        <w>Al</w>
-                        <abbr type="title">Signor</abbr>
-                        <lb />
-                        <address>
-                            <addrLine>
-                                <persName>
-                                    <surname>Turtura</surname>
-                                    <forename>Giuseppe</forename>
-                                </persName>
-                            </addrLine>
+                    <div facs="#ricevente" type="destination">
+                        <p>
+                            <w>Al</w>
+                            <abbr type="title">Signor</abbr>
                             <lb />
-                            <street>
-                                <w>Via</w>
-                                <w>Girolamo</w>
-                                <w>Rossi</w>
-                            </street>
-                            <lb />
-                            <addrLine>
-                                <roleName>
-                                    <w>Capo</w>
-                                    <w>Mastro</w>
-                                    <lb />
-                                    <w>Muratore</w>
-                                </roleName>
-                                <placeName>Ravenna</placeName>
-                            </addrLine>
-                        </address>
-                    </p>
+                            <address>
+                                <addrLine>
+                                    <persName>
+                                        <surname>Turtura</surname>
+                                        <forename>Giuseppe</forename>
+                                    </persName>
+                                </addrLine>
+                                <lb />
+                                <street>
+                                    <w>Via</w>
+                                    <w>Girolamo</w>
+                                    <w>Rossi</w>
+                                </street>
+                                <lb />
+                                <addrLine>
+                                    <roleName>
+                                        <w>Capo</w>
+                                        <w>Mastro</w>
+                                        <w>Muratore</w>
+                                    </roleName>
+                                    <placeName>Ravenna</placeName>
+                                </addrLine>
+                            </address>
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </body>
     </text>
     <facsimile>
@@ -409,7 +413,7 @@
             <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802">
                 <graphic url='./cartoline/zone/17-msg.jpg' />
             </zone>
-            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" >
+            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021">
                 <graphic url='./cartoline/zone/17-artist.jpg' />
             </zone>
         </surface>

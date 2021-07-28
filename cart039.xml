@@ -219,6 +219,9 @@
                             </unclear>
                         </p>
                     </div>
+                    <div facs='#artist'>
+                        <p>Riferimento alla proprietà e/o al titolo dell' opera</p>
+                    </div>
                 </div>
                 <div xml:id="lato_destro">
                     <div facs="#altodx">
@@ -236,10 +239,11 @@
                                 <lb />
                                 <w>PER</w>
                                 <w>CENSURA</w>
+                                <lb />
                                 <figure>
                                     <figDesc>
-                                 Si iontravede sotto alla parola il logo della croce rossa, contornata dalla scritta "CROCE ROSSA ITALIANA"
-                                </figDesc>
+                                    Si intravede sotto alla parola il logo della croce rossa, contornata dalla scritta "CROCE ROSSA ITALIANA"
+                                    </figDesc>
                                 </figure>
                                 <lb />
                                 <pc>"</pc>
@@ -248,12 +252,11 @@
                                 <w>MILANO</w>
                                 <pc>"</pc>
                             </stamp>
-                            <unclear reason="faded">
-                                <stamp type="mark" />
-                            </unclear>
-                            <unclear reason="faded">
-                                <stamp type="mark" />
-                            </unclear>
+                            <stamp type="mark">
+                                <unclear reason="faded">
+                                    <note>Non si legge nessuno dei due timbri</note>
+                                </unclear>
+                            </stamp>
                             <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
 
