@@ -325,4 +325,27 @@
             </div>
         </body>
     </text>
+    <facsimile>
+        <!--retro-->
+        <surface type="retro">
+            <graphic url='cartoline/7694-018R.jpg' width='1646px' height='1043px' />
+            <!-- Lato destro -->
+            <zone xml:id="altodx" points='651,580 1633,588 1626,11 663,16'>
+                <graphic url='./cartoline/zone/18-altodx.jpg' />
+            </zone>
+            <zone xml:id="ricevente" points='546,579 497,1039 1634,1034 1604,556'>
+                <graphic url='./cartoline/zone/18-ricevente.jpg' />
+            </zone>
+            <!-- Lato sinistro -->
+            <zone xml:id="altosx" points='6,11 12,353 654,317 668,6'>
+                <graphic url='./cartoline/zone/18-altosx.jpg' />
+            </zone>
+            <zone xml:id="msg" points='597,899 4,906 7,309 640,303'>
+                <graphic url='./cartoline/zone/18-msg.jpg' />
+            </zone>
+            <zone xml:id="artist" points='52,900 642,892 631,973 56,969'>
+                <graphic url='./cartoline/zone/18-artist.jpg' />
+            </zone>
+        </surface>
+    </facsimile>
 </teiCorpus>

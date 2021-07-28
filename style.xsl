@@ -20,7 +20,8 @@
                 <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
-                <div class="main-wrapper shadow">
+                <div id="loading"></div>
+                <div class="main-wrapper page shadow">
                     <div class="container-lg">
                         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                             <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -280,7 +281,13 @@
 
     <!-- Immagine fronte e retro -->
     <xsl:template match="tei:graphic">
-        <a href="{@url}" data-lightbox="cartolina" class="">
+        <a href="{@url}" data-lightbox="cartolina">
+            <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{@url}" />
+        </a>
+    </xsl:template>
+
+    <xsl:template match="tei:zone/tei:graphic">
+        <a href="{@url}" data-lightbox="zona">
             <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{@url}" />
         </a>
     </xsl:template>
@@ -300,58 +307,98 @@
     <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
         <div class="container">
             <div class="accordion accordion-flush" id="accordionGroup">
-
-                <div class="accordion-item">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#msg" aria-expanded="false" aria-controls="msg">
-                        <h5 class="accordion-header" id="acc1">Messaggio</h5>
-                    </button>
-                    <div id="msg" class="accordion-collapse collapse" aria-labelledby="acc1" data-bs-parent="#accordionGroup">
-                        <div class="accordion-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <xsl:apply-templates select="//tei:zone[@xml:id='msg']" />
-                                </div>
-                                <div class="col-lg-6">
-                                    <p>
-                                        <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#timbri" aria-expanded="false" aria-controls="timbri">
-                            <h5 class="accordion-header" id="acc2">Parte superiore lato destro</h5>
-                        </button>
-                        <div id="timbri" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
-                            <div class="accordion-body">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <xsl:apply-templates select="//tei:zone[@xml:id='timbri']" />
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <p>
-                                            <xsl:apply-templates select="//tei:div/tei:div[@type='marks']" />
-                                        </p>
+                <div class="row p-2">
+                    <div class="col-md-12 p-3">
+                        <h4 class="text-primary py-3 text-center">Lato sinistro</h4>
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#altosx" aria-expanded="false" aria-controls="altosx">
+                                <h5 class="accordion-header" id="acc0">Parte alta lato sinistro</h5>
+                            </button>
+                            <div id="altosx" class="accordion-collapse collapse" aria-labelledby="acc0" data-bs-parent="#accordionGroup">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <xsl:apply-templates select="//tei:zone[@xml:id='altosx']" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addr" aria-expanded="false" aria-controls="addr">
-                            <h5 class="accordion-header" id="acc2">Indirizzo ricevente</h5>
-                        </button>
-                        <div id="addr" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
-                            <div class="accordion-body container">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <xsl:apply-templates select="//tei:zone[@xml:id='ricevente']" />
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#msg" aria-expanded="false" aria-controls="msg">
+                                <h5 class="accordion-header" id="acc1">Messaggio</h5>
+                            </button>
+                            <div id="msg" class="accordion-collapse collapse" aria-labelledby="acc1" data-bs-parent="#accordionGroup">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <xsl:apply-templates select="//tei:zone[@xml:id='msg']" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <p>
-                                            <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
-                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#artist" aria-expanded="false" aria-controls="artist">
+                                <h5 class="accordion-header" id="acc2">Riferimento artista</h5>
+                            </button>
+                            <div id="artist" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <xsl:apply-templates select="//tei:zone[@xml:id='artist']" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-3">
+                        <h4 class="text-primary py-3 text-center">Lato destro</h4>
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#altodx" aria-expanded="false" aria-controls="altodx">
+                                <h5 class="accordion-header" id="acc2">Parte superiore lato destro</h5>
+                            </button>
+                            <div id="altodx" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <xsl:apply-templates select="//tei:zone[@xml:id='altodx']" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <xsl:apply-templates select="//tei:div[@facs='#altodx']" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#addr" aria-expanded="false" aria-controls="addr">
+                                <h5 class="accordion-header" id="acc2">Indirizzo ricevente</h5>
+                            </button>
+                            <div id="addr" class="accordion-collapse collapse" aria-labelledby="acc2" data-bs-parent="#accordionGroup">
+                                <div class="accordion-body container">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <xsl:apply-templates select="//tei:zone[@xml:id='ricevente']" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p>
+                                                <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

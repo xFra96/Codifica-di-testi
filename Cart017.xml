@@ -283,107 +283,110 @@
                     </div>
                 </div>
                 <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#alto">
-                        <p>
-                            <w>Cartolina</w>
-                            <w>Postale</w>
-                            <w>Commemorativa</w>
-                            <lb />
-                            <w>Della</w>
-                            <distinct type="roman">
-                                V
-                                <pc>.</pc>
-                            </distinct>
-                            <distinct type="latin">
-                                <w>Gverra</w>
-                            </distinct>
-                            <w>per</w>
-                            <w>l</w>
-                            <pc>'</pc>
-                            <w>indipendenza</w>
-                            <unclear>
-                                <w>
-                                    <note>Ultima parola non leggibile, si presuppone sia Italia</note>
-                                </w>
-                            </unclear>
-                        </p>
-                    </div>
-                    <div facs="#timbri" type="marks">
-                        <p>
-                            <!-- stamps -->
-                            <stamp type="postmark">
-                                <date type="writing" when="1915-09-16">
-                                    <num>16</num>
-                                    <abbr type="contraction">
-                                        Sett
-                                        <pc>.</pc>
-                                    </abbr>
-                                    <num>15</num>
-                                </date>
-                            </stamp>
-                            <phr>
+                    <div facs='#altodx'>
+                        <div facs="#alto">
+                            <p>
+                                <w>Cartolina</w>
+                                <w>Postale</w>
+                                <w>Commemorativa</w>
                                 <lb />
-                                <w>Edizione</w>
-                                <lb />
-                                <w>della</w>
-                                <lb />
-                                <w>Croce</w>
-                                <w>Rossa</w>
-                                <w>Italiana</w>
-                                <lb />
-                                <w>a</w>
-                                <w>proprio</w>
-                                <lb />
-                                <distinct type="latin">
-                                    <w>esclvsivo</w>
+                                <w>Della</w>
+                                <distinct type="roman">
+                                    V
+                                    <pc>.</pc>
                                 </distinct>
-                                <lb />
-                                <w>beneficio</w>
-                            </phr>
-                            <unclear reason="faded">
+                                <distinct type="latin">
+                                    <w>Gverra</w>
+                                </distinct>
+                                <w>per</w>
+                                <w>l</w>
+                                <pc>'</pc>
+                                <w>indipendenza</w>
+                                <unclear>
+                                    <w>
+                                        <note>Ultima parola non leggibile, si presuppone sia Italia</note>
+                                    </w>
+                                </unclear>
+                            </p>
+                        </div>
+                        <div type="marks">
+                            <p>
+                                <!-- stamps -->
                                 <stamp type="postmark">
-                                    <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                    <date type="writing" when="1915-09-16">
+                                        <num>16</num>
+                                        <abbr type="contraction">
+                                            Sett
+                                            <pc>.</pc>
+                                        </abbr>
+                                        <num>15</num>
+                                    </date>
                                 </stamp>
-                            </unclear>
-                            <figure>
-                                <figDesc>
+                                <phr>
+                                    <lb />
+                                    <w>Edizione</w>
+                                    <lb />
+                                    <w>della</w>
+                                    <lb />
+                                    <w>Croce</w>
+                                    <w>Rossa</w>
+                                    <w>Italiana</w>
+                                    <lb />
+                                    <w>a</w>
+                                    <w>proprio</w>
+                                    <lb />
+                                    <distinct type="latin">
+                                        <w>esclvsivo</w>
+                                    </distinct>
+                                    <lb />
+                                    <w>beneficio</w>
+                                </phr>
+                                <unclear reason="faded">
+                                    <stamp type="postmark">
+                                        <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                    </stamp>
+                                </unclear>
+                                <figure>
+                                    <figDesc>
                              Si distingue nitidamente il logo della croce rossa, contornata da una cornice che si allarga comprendendo il Francobollo e l'altra frase
                             </figDesc>
-                            </figure>
-                            <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
-                        </p>
+                                </figure>
+                                <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
+                            </p>
+                        </div>
                     </div>
-                    <div facs="#ricevente" type="destination">
-                        <p>
-                            <w>Al</w>
-                            <abbr type="title">Signor</abbr>
+
+                </div>
+                <div facs="#ricevente" type="destination">
+                    <p>
+                        <w>Al</w>
+                        <abbr type="title">Signor</abbr>
+                        <lb />
+                        <address>
+                            <addrLine>
+                                <persName>
+                                    <surname>Turtura</surname>
+                                    <forename>Giuseppe</forename>
+                                </persName>
+                            </addrLine>
                             <lb />
-                            <address>
-                                <addrLine>
-                                    <persName>
-                                        <surname>Turtura</surname>
-                                        <forename>Giuseppe</forename>
-                                    </persName>
-                                </addrLine>
-                                <lb />
-                                <street>
-                                    <w>Via</w>
-                                    <w>Girolamo</w>
-                                    <w>Rossi</w>
-                                </street>
-                                <lb />
-                                <addrLine>
-                                    <roleName>
-                                        <w>Capo</w>
-                                        <w>Mastro</w>
-                                        <lb />
-                                        <w>Muratore</w>
-                                    </roleName>
-                                    <placeName>Ravenna</placeName>
-                                </addrLine>
-                            </address>
-                        </p>
-                    </div>
+                            <street>
+                                <w>Via</w>
+                                <w>Girolamo</w>
+                                <w>Rossi</w>
+                            </street>
+                            <lb />
+                            <addrLine>
+                                <roleName>
+                                    <w>Capo</w>
+                                    <w>Mastro</w>
+                                    <lb />
+                                    <w>Muratore</w>
+                                </roleName>
+                                <placeName>Ravenna</placeName>
+                            </addrLine>
+                        </address>
+                    </p>
                 </div>
             </div>
         </body>
@@ -391,20 +394,24 @@
     <facsimile>
         <!--retro-->
         <surface type="retro">
-            <graphic url='./cartoline/7694-017R.jpg' width='1642px' height='1055px' />
+            <graphic url='cartoline/7694-017R.jpg' width='1642px' height='1055px' />
             <!-- Lato destro -->
-            <zone xml:id="timbri" ulx="674" uly="193" lrx="1622" lry="582">
-                <graphic url='./cartoline/zone/17-timbri.jpg' />
+            <zone xml:id="altodx" ulx="674" uly="193" lrx="1622" lry="582">
+                <graphic url='./cartoline/zone/17-altodx.jpg' />
             </zone>
             <zone xml:id="ricevente" ulx="676" uly="593" lrx="1621" lry="1041">
                 <graphic url='./cartoline/zone/17-ricevente.jpg' />
             </zone>
             <!-- Lato sinistro -->
-            <zone xml:id="angolosx" ulx="11" uly="9" lrx="325" lry="300" />
+            <zone xml:id="altosx" ulx="11" uly="9" lrx="325" lry="300">
+                <graphic url='./cartoline/zone/17-altosx.jpg' />
+            </zone>
             <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802">
                 <graphic url='./cartoline/zone/17-msg.jpg' />
             </zone>
-            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" />
+            <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021" >
+                <graphic url='./cartoline/zone/17-artist.jpg' />
+            </zone>
         </surface>
     </facsimile>
 </teiCorpus>

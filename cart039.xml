@@ -220,8 +220,8 @@
                         </p>
                     </div>
                 </div>
-                <div xml:id="lato_destro" facs="#ld">
-                    <div facs="#timbri" type="marks">
+                <div xml:id="lato_destro">
+                    <div facs="#altodx">
                         <p>
                             <stamp type="mark">
                                 <w>OSPEDALE</w>
@@ -256,6 +256,7 @@
                             </unclear>
                             <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
+                       
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
@@ -291,4 +292,27 @@
             </div>
         </body>
     </text>
+    <facsimile>
+        <!--retro-->
+        <surface type="retro">
+            <graphic url='cartoline/7694-039R.jpg' width='1661px' height='1061px' />
+            <!-- Lato destro -->
+            <zone xml:id="altodx" points='600,19 607,457 1635,464 1640,20'>
+                <graphic url='./cartoline/zone/39-altodx.jpg' />
+            </zone>
+            <zone xml:id="ricevente" points='685,390 1635,383 1628,1010 728,995'>
+                <graphic url='./cartoline/zone/39-ricevente.jpg' />
+            </zone>
+            <!-- Lato sinistro -->
+            <zone xml:id="altosx" points='10,11 17,210 223,203 244,10'>
+                <graphic url='./cartoline/zone/39-altosx.jpg' />
+            </zone>
+            <zone xml:id="msg" points='71,1028 732,1022 695,94 56,167'>
+                <graphic url='./cartoline/zone/39-msg.jpg' />
+            </zone>
+            <zone xml:id="artist" points='11,385 81,379 91,1008 11,1018'>
+                <graphic url='./cartoline/zone/39-artist.jpg' />
+            </zone>
+        </surface>
+    </facsimile>
 </teiCorpus>
