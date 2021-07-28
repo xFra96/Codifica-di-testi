@@ -12,7 +12,7 @@
                 <meta name="author" content="Francesco Spagnoli" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>
-                    <xsl:value-of select="tei:teiCorpus//tei:fileDesc/tei:titleStmt/tei:title" />
+                    <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:title" />
                 </title>
                 <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
                 <link href="./assets/css/FA-all.css" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@
                     </section>
                     <section>
                         <div class="container-lg">
-                            <xsl:apply-templates select="//tei:teiCorpus/tei:text[@type='cartolina']" />
+                            <xsl:apply-templates select="//tei:text[@type='cartolina']" />
                         </div>
                         <div class="container-lg">
                             <xsl:call-template name="renderInfoProgetto" />
@@ -65,7 +65,7 @@
     </xsl:template>
 
     <!-- MAIN STRUCTURE  -->
-    <xsl:template match="tei:teiCorpus/tei:text[@type='cartolina']">
+    <xsl:template match="tei:text[@type='cartolina']">
         <div class="row mt-3">
             <div class="col-lg-6 col-md-12">
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='fronteimg']" />

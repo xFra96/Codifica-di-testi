@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
 
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:id="main">
         <fileDesc>
             <!-- contiene informazioni del file -->
@@ -81,7 +81,6 @@
                     </msIdentifier>
                 </msDesc>
             </sourceDesc>
-
         </fileDesc>
     </teiHeader>
-</teiCorpus>
+</TEI>

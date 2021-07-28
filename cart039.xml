@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<teiCorpus xml:id="cart39" xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xml:id="cart39" xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -256,7 +256,7 @@
                             </unclear>
                             <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
-                       
+
                     </div>
                     <div facs="#ricevente" type="destination">
                         <p>
@@ -315,4 +315,4 @@
             </zone>
         </surface>
     </facsimile>
-</teiCorpus>
+</TEI>
