@@ -24,6 +24,7 @@ section {
     background-color: white;
     padding: 1.5rem;
     min-width: 50%;
+    display: block;
 }
 
 .bg-img, body {
@@ -32,7 +33,7 @@ section {
 }
 
 #loading {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 100;
     width: 100%;
@@ -41,6 +42,10 @@ section {
     background-image: url("../images/loading.gif");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#cart17, #cart18, #cart39 {
+    display: none;
 }
 
 @media screen and (max-width:600px) {
