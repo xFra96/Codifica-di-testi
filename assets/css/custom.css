@@ -23,6 +23,7 @@ section {
     border-radius: 35px;
     background-color: white;
     padding: 1.5rem;
+    min-width: 50%;
 }
 
 .bg-img, body {

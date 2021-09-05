@@ -32,13 +32,13 @@
                 <respStmt>
                     <resp>encoding by</resp>
                     <name xml:id="TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
                 <respStmt>
                     <resp>Compilatore</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name>Tommaso Castagneto</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <respStmt>
                     <resp>Responsabile scientifico</resp>
@@ -64,7 +64,7 @@
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
             <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul retro si nota la firma dell'artista del quadro riportato sul fronte della cartolina, si tratta di T. Cascella che viene accostato al nome dell'opera "L'Adige (verso Chizzola)"</note>
+                <note n="1.1">I colori dell'immagine sembrano ben conservati, nonostante si noti l'effetto del tempo sui bordi del fronte della cartolina</note>
             </notesStmt>
 
             <sourceDesc>
@@ -75,7 +75,7 @@
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
                     <title xml:id="tit1">L'Adige (verso Chizzola)</title>
                     <author>Tommaso Cascella</author>
-                    <publisher>Croce Rossa</publisher>
+                    <publisher>Croce Rossa Italiana</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>
                 </bibl>
@@ -130,6 +130,12 @@
                         <country key="IT">IT</country>
                         <note>Indirizzo ricevente</note>
                     </place>
+                    <place>
+                        <settlement type="località">Udine</settlement>
+                        <district type="provincia">UD</district>
+                        <country key="IT">IT</country>
+                        <note>Città del mittente </note>
+                    </place>
                 </listPlace>
 
                 <!-- NOMI -->
@@ -171,7 +177,7 @@
                             191
                             <unclear reason="illegible">
                                 <num>
-                                    <note>Non si legge l'ultimo numero della data</note>
+                                    <note>Non si legge l'ultimo numero della data, probabilmente si tratta di un 5</note>
                                 </num>
                             </unclear>
                         </num>
@@ -295,14 +301,9 @@
                             <w>Commemorativa</w>
                             <lb />
                             <w>Della</w>
-                            <distinct type="roman">
-                                V
-                                <pc>.</pc>
-                            </distinct>
-                            <distinct type="latin">
-                                <w>Gverra</w>
-                            </distinct>
-                            <w>per</w>
+                            <unclear reason="illegible">
+                                <note>La scritta è sovrastata dal timbro</note>
+                            </unclear>
                             <w>l</w>
                             <pc>'</pc>
                             <w>indipendenza</w>

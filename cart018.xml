@@ -32,13 +32,13 @@
                 <respStmt>
                     <resp>encoding by</resp>
                     <name xml:id="TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
                 <respStmt>
                     <resp>Compilatore</resp>
                     <name ref="#TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <respStmt>
                     <resp>Responsabile scientifico</resp>
@@ -63,9 +63,6 @@
                 </address>
             </publicationStmt>
             <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
-            <notesStmt xml:id="notesStmt1">
-                <note n="1.1">Sul retro si nota il riferimento all'artista del quadro riportato sul fronte della cartolina, Tommaso Cascella"</note>
-            </notesStmt>
             <sourceDesc>
                 <bibl>
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
@@ -127,6 +124,12 @@
                         <note>Indirizzo ricevente</note>
                     </place>
                     <place>
+                        <placeName>Via San Vittore</placeName>
+                        <settlement type="località">Ravenna</settlement>
+                        <district type="provincia">RV</district>
+                        <country key="IT">IT</country>
+                    </place>
+                    <place>
                         <placeName>Formica</placeName>
                         <settlement type="località">Modena</settlement>
                         <district type="provincia">MO</district>
@@ -134,6 +137,16 @@
                         <note>Località mittente</note>
                     </place>
                 </listPlace>
+                <listPerson>
+                    <person>
+                        <persName>
+                            <forename>Oliva</forename>
+                            <surname>Turtura</surname>
+                        </persName>
+                        <sex>F</sex>
+                        <note>Ricevente</note>
+                    </person>
+                </listPerson>
             </sourceDesc>
         </fileDesc>
 
@@ -206,10 +219,11 @@
                                 <stamp type="mark" />
                                 <note>Sotto al numero 18 compare un timbro poco leggibile, probabilmente della croce rossa</note>
                             </unclear>
-                            <unclear reason="eccentric_ductus">
-                                <stamp type="mark" />
-                                <note>Il timbro non è ben leggibile in quanto la stampa non è avvenuta correttamente, infatti si nota solamente metà di esso dato che la parte rimanente è rimasta fuori dalla cartolina durante la pressione del timbro.</note>
-                            </unclear>
+                            <stamp type="mark">
+                                <unclear reason="eccentric_ductus">
+                                    <note>Il timbro non è ben leggibile in quanto la stampa non è avvenuta correttamente, infatti si nota solamente metà di esso dato che la parte rimanente è rimasta fuori dalla cartolina durante la pressione del timbro.</note>
+                                </unclear>
+                            </stamp>
                             <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
                         </p>
                     </div>
@@ -217,7 +231,7 @@
                         <p>
                             <unclear reason="illegible">
                                 <phr>
-                                    <note>Viene riportato dal mittente probabilmente un saluto</note>
+                                    <note>Viene riportato dal mittente probabilmente un saluto, si distinguono più chiaramente solo le iniziali, che sembrano essere QR</note>
                                 </phr>
                             </unclear>
                             <phr>
@@ -246,7 +260,7 @@
                             <lb />
                             <w>Della</w>
                             <distinct type="roman">
-                                V
+                                IV
                                 <pc>.</pc>
                             </distinct>
                             <distinct type="latin">

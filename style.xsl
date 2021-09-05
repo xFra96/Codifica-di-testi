@@ -50,6 +50,11 @@
                     </section>
                     <section>
                         <div class="container-lg">
+                            <xsl:if test="//tei:TEI[@xml:id='cart39' or @xml:id='cart17' or @xml:id='cart18']">
+                                <xsl:call-template name="renderInfoCartolina" />
+                            </xsl:if>
+                        </div>
+                        <div class="container-lg">
                             <xsl:apply-templates select="//tei:text[@type='cartolina']" />
                         </div>
                         <div class="container-lg">
@@ -98,14 +103,11 @@
                 </h6>
             </div>
         </div>
-        <xsl:if test="/tei:teiCorpus[@xml:id='cart39' or @xml:id='cart17' or @xml:id='cart18']">
-            <xsl:call-template name="renderInfoCartolina" />
-        </xsl:if>
     </xsl:template>
 
     <!-- Info Cartolina -->
     <xsl:template name="renderInfoCartolina">
-        <div class="row pt-5">
+        <div class="row mb-5">
             <div class="col-md-12">
                 <h4 class="text-center mb-5">Info cartolina</h4>
                 <xsl:apply-templates select="//tei:fileDesc/tei:sourceDesc" />
@@ -117,71 +119,86 @@
     <xsl:template name="renderInfoProgetto">
         <div class="row pt-5">
             <div class="col-md-12 pb-4">
-                <a class="" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
-                    <h4 class="text-center mb-5">Info progetto</h4>
-                </a>
-                <div class="collapse" id="collapse1">
-                    <div class="card card-body">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <b>Ente di appartenenza:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:name[@xml:id='SP']" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Encoding by:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:name[@xml:id='FS']" />
-                                        -
-                                        <xsl:value-of select="//tei:name[@xml:id='TC']" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Compilatore:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:name[@xml:id='FS']" />
-                                        -
-                                        <xsl:value-of select="//tei:name[@xml:id='TC']" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Responsabile scientifico:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:name[@xml:id='GP']" />
-                                        -
-                                        <xsl:value-of select="//tei:name[@xml:id='ES']" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Funzionario responsabile:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:name[@xml:id='MR']" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Note non rilevanti ai fini della codifica:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="//tei:notesStmt[@xml:id='notesStmt1']" />
-                                    </td>
+                <h4 class="text-center mb-5">Info progetto</h4>
+                <div class="card card-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <b>Ente di appartenenza:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:name[@xml:id='SP']" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Encoding by:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:name[@xml:id='FS']" />
+                                    -
+                                    <xsl:value-of select="//tei:name[@xml:id='TC']" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Compilatore:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:name[@xml:id='FS']" />
+                                    -
+                                    <xsl:value-of select="//tei:name[@xml:id='TC']" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Responsabile scientifico:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:name[@xml:id='GP']" />
+                                    -
+                                    <xsl:value-of select="//tei:name[@xml:id='ES']" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Funzionario responsabile:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:name[@xml:id='MR']" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Note non rilevanti ai fini della codifica:</b>
+                                </td>
+                                <td>
+                                    <xsl:value-of select="//tei:notesStmt[@xml:id='notesStmt1']" />
+                                </td>
 
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="text-center">
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center w-100">
+                        <p>
+                            <b>Legenda simboli:</b>
+                        </p>
+                        <p>
+                            <span class="mx-2">
+                                <i class="fas fa-stamp"></i>
+                                - Timbri
+                            </span>
+                            <span class="mx-2">
+                                <i class="fas fa-file-image"></i>
+                                - Immagine/Logo
+                            </span>
+                            <span class="mx-2">
+                                <i class="fas fa-sticky-note"></i>
+                                - Nota/Commento
+                            </span>
+                        </p>
+                        <p>
                             ©
                             <xsl:value-of select="//tei:publicationStmt/tei:date" />
                             <i>
@@ -196,7 +213,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </xsl:template>
 
@@ -207,7 +223,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <b>Coservata al:</b>
+                            <b>Luogo dove è conservata:</b>
                         </td>
                         <td>
                             <xsl:value-of select="//tei:repository" />
@@ -226,7 +242,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <b>Autore dell'opera sul fronte della cartolina:</b>
+                            <b>Autore dell'opera riportato sulla cartolina:</b>
                         </td>
                         <td>
                             <xsl:value-of select="tei:bibl/tei:author" />
@@ -248,6 +264,35 @@
                         </td>
                         <td>
                             <xsl:value-of select="tei:bibl/tei:date" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Lingua:</b>
+                        </td>
+                        <td>
+                            <xsl:value-of select="tei:msDesc/tei:msContents/tei:textLang" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Tipo:</b>
+                        </td>
+                        <td>
+                            <xsl:value-of select="tei:msDesc/tei:msContents/tei:summary" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Materiale:</b>
+                        </td>
+                        <td>
+                            <xsl:value-of select="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material" />
+                            -
+                            <xsl:value-of select="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:dimensions/tei:width" />
+                            x
+                            <xsl:value-of select="tei:msDesc/tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:dimensions/tei:height" />
+                            cm
                         </td>
                     </tr>
                     <tr>
@@ -423,14 +468,12 @@
     </xsl:template>
 
     <xsl:template match="tei:unclear">
-        <xsl:if test="@reason='illegible' or @reason='faded' or not(@reason)">
-            <span type="button" class="nota" data-bs-container-lg="body" data-bs-trigger="hover focus" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Note">
-                <xsl:attribute name="data-bs-content">
-                    <xsl:value-of select="." />
-                </xsl:attribute>
-                <i class="fas fa-info mx-1"></i>
-            </span>
-        </xsl:if>
+        <span type="button" class="nota" data-bs-container-lg="body" data-bs-trigger="hover focus" data-bs-toggle="popover" data-bs-placement="right" data-bs-title="Nota">
+            <xsl:attribute name="data-bs-content">
+                <xsl:value-of select="." />
+            </xsl:attribute>
+            <i class="fas fa-sticky-note mx-1"></i>
+        </span>
     </xsl:template>
 
     <xsl:template match="tei:stamp">
@@ -444,17 +487,19 @@
     <xsl:template match="tei:listPlace">
         <xsl:for-each select="tei:place">
             <p class="mb-0">
-                <xsl:value-of select="tei:placeName" />
-                ,
+                <xsl:if test="tei:placeName">
+                    <xsl:value-of select="tei:placeName" />
+                    ,
+                </xsl:if>
                 <xsl:value-of select="tei:settlement" />
                 (
                 <xsl:value-of select="tei:district" />
-                ) 
-        -
-      
-        [
-                <xsl:value-of select="tei:note" />
-                ]
+                )
+                <xsl:if test="tei:note">
+                    -  [
+                    <xsl:value-of select="tei:note" />
+                    ]
+                </xsl:if>
             </p>
         </xsl:for-each>
     </xsl:template>
@@ -462,7 +507,8 @@
     <xsl:template match="tei:figure[@type='logo']">
         <div class="alert alert-warning" role="alert">
             <i class="fas fa-file-image"></i>
-            -  <xsl:value-of select="." />
+            -
+            <xsl:value-of select="." />
         </div>
     </xsl:template>
 
@@ -470,9 +516,10 @@
         <xsl:for-each select="tei:person">
             <p class="mb-0">
                 <xsl:value-of select="tei:persName" />
-                <xsl:if test="/tei:occupation">
-                    ,
+                <xsl:if test="tei:occupation">
+                    (
                     <xsl:value-of select="tei:occupation" />
+                    )
                 </xsl:if>
                 [
                 <xsl:value-of select="tei:note" />

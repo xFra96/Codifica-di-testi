@@ -125,6 +125,16 @@
                         <note>Indirizzo ricevente</note>
                     </place>
                 </listPlace>
+                <listPerson>
+                    <person>
+                        <persName>
+                            <forename>Oliva</forename>
+                            <surname>Turtura</surname>
+                        </persName>
+                        <sex>F</sex>
+                        <note>Ricevente</note>
+                    </person>
+                </listPerson>
             </sourceDesc>
         </fileDesc>
 
@@ -197,18 +207,14 @@
                     <div facs="#msg" type="message">
                         <p>
                             <lb />
+                            <abbr type="suspension">L.G.L.</abbr>
                             <date type="writing">
-                                <num>16</num>
-                                <pc>-</pc>
-                                <num>9</num>
+                                <num>19</num>
+                                <pc>/</pc>
+                                <num>2</num>
                                 <pc>-</pc>
                                 <num>
-                                    191
-                                    <unclear reason="illegible">
-                                        <num>
-                                            <note>Non si legge l'ultimo numero della data</note>
-                                        </num>
-                                    </unclear>
+                                    1917
                                 </num>
                             </date>
                             <lb />
@@ -240,11 +246,9 @@
                                 <w>PER</w>
                                 <w>CENSURA</w>
                                 <lb />
-                                <figure>
-                                    <figDesc>
-                                    Si intravede sotto alla parola il logo della croce rossa, contornata dalla scritta "CROCE ROSSA ITALIANA"
-                                    </figDesc>
-                                </figure>
+                                <unclear>
+                                    <note>Si intravede sotto alla parola il logo della croce rossa, contornata dalla scritta "CROCE ROSSA ITALIANA"</note>
+                                </unclear>
                                 <lb />
                                 <pc>"</pc>
                                 <w>CITTÀ</w>
