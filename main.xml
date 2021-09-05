@@ -12,7 +12,7 @@
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name ref="#FS">
+                    <name xml:id="FS">
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -23,7 +23,6 @@
                     <name type="comune" xml:id="SP">Comune della Spezia</name>
                 </respStmt>
             </titleStmt>
-
             <editionStmt>
                 <edition>
                     Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
@@ -34,14 +33,14 @@
                 <!-- NOME COMPILATORE -->
                 <respStmt>
                     <resp>encoding by</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name xml:id="TC">Tommaso Castagneto</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
                 <respStmt>
                     <resp>Compilatore</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
-                    <name ref="#FS">Francesco Spagnoli</name>
+                    <name>Tommaso Castagneto</name>
+                    <name>Francesco Spagnoli</name>
                 </respStmt>
                 <respStmt>
                     <resp>Responsabile scientifico</resp>
@@ -53,7 +52,6 @@
                     <name xml:id="MR">Marzia Ratti</name>
                 </respStmt>
             </editionStmt>
-
             <publicationStmt>
                 <publisher>Unipi</publisher>
                 <pubPlace>Pisa</pubPlace>
@@ -64,7 +62,6 @@
                 <distributor>LabCD</distributor>
                 <address>
                     <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
-                    <addrLine>Pisa</addrLine>
                 </address>
             </publicationStmt>
 

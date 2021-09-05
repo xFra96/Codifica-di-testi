@@ -1,1 +1,3 @@
-# Codifica di Testi
+# Progetto Codifica di Testi
+Progetto di esame del corso Codifica di Testi realizzato da Spagnoli Francesco (Mat.552452)
+Le cartoline analizzate sono le seguenti: 7694-017; 7694-018; 7694-039. 
