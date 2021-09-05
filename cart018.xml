@@ -37,7 +37,7 @@
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
                 <respStmt>
                     <resp>Compilatore</resp>
-                    <name ref="#TC">Tommaso Castagneto</name>
+                    <name>Tommaso Castagneto</name>
                     <name>Francesco Spagnoli</name>
                 </respStmt>
                 <respStmt>
