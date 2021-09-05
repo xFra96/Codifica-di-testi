@@ -14,14 +14,11 @@ const setVisible = (elementOrSelector, visible) =>
 setVisible('.page', false);
 setVisible('#loading', true);
 
-document.addEventListener('DOMContentLoaded', () =>
+document.addEventListener('DOMContentLoaded', () => {
   wait(300).then(() => {
     setVisible('.page', true);
     setVisible('#loading', false);
   })
-);
-
-document.addEventListener('DOMContentLoaded', () => {
   const togglers = document.querySelectorAll('.toggler')
   for (let i = 0; i < togglers.length; i++) {
     togglers[i].addEventListener("click", function () {
