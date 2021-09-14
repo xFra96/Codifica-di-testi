@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<!DOCTYPE teiCorpus SYSTEM "tei_all.dtd">
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:id="main">
         <fileDesc>
             <!-- contiene informazioni del file -->
@@ -80,9 +80,423 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text>
-        <body>
-            <p></p>
-        </body>
-    </text>
-</TEI>
+    <TEI xml:id="cart17" xmlns="http://www.tei-c.org/ns/1.0">
+        <teiHeader>
+            <fileDesc>
+                <titleStmt>
+                    <!-- TITOLO NB: non corrisponde completamente alla voce TITOLO della tabella perché si tratta del titolo della edizione digitale -->
+                    <title>L'Adige (verso Chizzola) - Edizione digitale</title>
+                    <!-- TRASCRITTORE nome e cognome-->
+                    <respStmt>
+                        <resp>Conversione TEI P5 a cura di</resp>
+                        <name facs="FS">
+                            <forename>Francesco</forename>
+                            <surname>Spagnoli</surname>
+                        </name>
+                    </respStmt>
+                    <!-- ENTE DI APPARTENENZA -->
+                    <respStmt>
+                        <resp>Ente di Appartenenza</resp>
+                        <name type="comune" facs="SP">Comune della Spezia</name>
+                    </respStmt>
+                </titleStmt>
+                <editionStmt>
+                    <edition>
+                        Studente del Corso di Laurea in Informatica Umanistica, Corso di Codifica di
+                   Testi
+                        <!-- COMPILAZIONE -->
+                        <date>2021</date>
+                    </edition>
+                    <!-- NOME COMPILATORE -->
+                    <respStmt>
+                        <resp>encoding by</resp>
+                        <name facs="TC">Tommaso Castagneto</name>
+                        <name>Francesco Spagnoli</name>
+                    </respStmt>
+                    <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
+                    <respStmt>
+                        <resp>Compilatore</resp>
+                        <name>Tommaso Castagneto</name>
+                        <name>Francesco Spagnoli</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Responsabile scientifico</resp>
+                        <name facs="GP">Giacomo Paolicchi</name>
+                        <name facs="ES">Enrica Salvatori</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Funzionario responsabile</resp>
+                        <name facs="MR">Marzia Ratti</name>
+                    </respStmt>
+                </editionStmt>
+                <publicationStmt>
+                    <publisher>Unipi</publisher>
+                    <pubPlace>Pisa</pubPlace>
+                    <availability>
+                        <p>Available under licence only</p>
+                    </availability>
+                    <date when="2021">2021</date>
+                    <distributor>LabCD</distributor>
+                    <address>
+                        <addrLine>Laboratorio di Cultura Digitale - Università di Pisa</addrLine>
+                    </address>
+                </publicationStmt>
+                <!-- NOTE NB: mettere qui tutto ciò che non rientra nella codifica -->
+                <notesStmt xml:id="notesStmt1">
+                    <note n="1.1">I colori dell'immagine sembrano ben conservati, nonostante si noti l'effetto del tempo sui bordi del fronte della cartolina</note>
+                </notesStmt>
+    
+                <sourceDesc>
+    
+                    <bibl>
+                        <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
+                            non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
+                            registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
+                        <title xml:id="tit1">L'Adige (verso Chizzola)</title>
+                        <author>Tommaso Cascella</author>
+                        <publisher>Croce Rossa Italiana</publisher>
+                        <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
+                        <date when="1915">1915</date>
+                    </bibl>
+    
+                    <msDesc>
+                        <!-- COLLOCAZIONE SPECIFICA -->
+                        <!-- CODICE IDENTIFICATIVO -->
+                        <msIdentifier>
+                            <country>Italia</country>
+                            <settlement>La Spezia (SP)</settlement>
+                            <!-- COLLOCAZIONE SPECIFICA -->
+                            <repository>Museo Civico Etnografico "Giovanni Podenzana", Sezione dei cimeli garibaldini e della Prima Guerrra Mondiale</repository>
+                            <!-- CODICE IDENTIFICATIVO -->
+                            <idno>7694_017_001/002</idno>
+                        </msIdentifier>
+                        <!-- Informazioni sul contenuto della cartolina -->
+                        <!-- DESCRIZIONE -->
+                        <msContents>
+                            <summary>Cartolina Geografica</summary>
+                            <textLang>Italiano</textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support>
+                                        <objectType>Cartolina</objectType>
+                                        <!-- MATERIALI -->
+                                        <material>Carta</material>
+                                        <!-- DIMENSIONE -->
+                                        <dimensions unit="cm">
+                                            <height>9</height>
+                                            <width>14</width>
+                                        </dimensions>
+                                        <stamp>francobollo - Regno d'Italia</stamp>
+                                    </support> <!-- CONSERVAZIONE 
+                                    buono = non occorrono interventi di restauro;
+                                    discreto = perfettamente leggibile in tutte le componenti ma con rischi di deterioramento per usura;
+                                    mediocre = perfettamente leggibile, ma mancano alcune sue parti;
+                                    cattivo = intaccato da parassiti o deteriorato da cattivi interventi passati o mancanti di parti rilevanti, necessita di restauro-->
+                                    <condition>Buono</condition>
+                                </supportDesc>
+                            </objectDesc>
+                        </physDesc>
+                    </msDesc>
+    
+                    <!-- LUOGHI -->
+                    <listPlace>
+                        <place>
+                            <placeName>Via Girolamo Rossi</placeName>
+                            <settlement type="località">Ravenna</settlement>
+                            <district type="provincia">RV</district>
+                            <country key="IT">IT</country>
+                            <note>Indirizzo ricevente</note>
+                        </place>
+                        <place>
+                            <settlement type="località">Udine</settlement>
+                            <district type="provincia">UD</district>
+                            <country key="IT">IT</country>
+                            <note>Città del mittente </note>
+                        </place>
+                    </listPlace>
+    
+                    <!-- NOMI -->
+                    <listPerson>
+                        <person>
+                            <persName>
+                                <forename>Giuseppe</forename>
+                                <surname>Turtura</surname>
+                            </persName>
+                            <sex>M</sex>
+                            <occupation n="1">Capo Mastro Muratore</occupation>
+                            <note>Ricevente</note>
+                        </person>
+                        <person>
+                            <persName>
+                                <forename>Romeo</forename>
+                                <surname>Benelli</surname>
+                            </persName>
+                            <sex>M</sex>
+                            <occupation n="2">Soldato</occupation>
+                            <note>Mittente</note>
+                        </person>
+                    </listPerson>
+    
+                </sourceDesc>
+            </fileDesc>
+            <profileDesc>
+                <correspDesc>
+                    <correspAction type="sent">
+                        <placeName ref="#CZ" />
+                        <!-- DATA data di invio da timbro (postage) o da manoscritto (writing) -->
+                        <date type="postage" when="1915-09-15">1916/09/15</date>
+                        <date type="writing">
+                            <num>16</num>
+                            <pc>-</pc>
+                            <num>9</num>
+                            <pc>-</pc>
+                            <num>
+                                191
+                                <unclear reason="illegible">
+                                    <num>
+                                        <note>Non si legge l'ultimo numero della data, probabilmente si tratta di un 5</note>
+                                    </num>
+                                </unclear>
+                            </num>
+                        </date>
+                    </correspAction>
+                    <correspAction type="received">
+                        <persName>
+                            Turtura Giuseppe
+                            <roleName>Capo Mastro Muratore</roleName>
+                        </persName>
+                        <address>
+                            <street>Via Girolamo Rossi</street>
+                            <placeName>Ravenna</placeName>
+                        </address>
+                    </correspAction>
+                </correspDesc>
+                <textClass>
+                    <keywords>
+                        <!-- soggettario -->
+                        <!-- tipologia -->
+                        <!-- descrizione -->
+                        <term>Cartolina </term>
+                        <term>Cartolina Paesaggistica</term>
+                        <term>Foto del fiume Adige scattata nei pressi di Chizzola, frazione di Trento</term>
+                    </keywords>
+                </textClass>
+                <langUsage>
+                    <language ident="it-IT">italiano</language>
+                </langUsage>
+            </profileDesc>
+        </teiHeader>
+        <!-- DEFINIZIONE -->
+        <text type="cartolina">
+            <!-- TRASCRIZIONE -->
+            <body>
+                <div type="fronte">
+                    <figure>
+                        <graphic xml:id="fronteimg" url="./cartoline/7694-017F.jpg" />
+                        <figDesc>Sul fronte è presente un'immagine paesaggistica, più precisamente si tratta di un dipinto del fiume Adige, fatto dal pittore Tommaso Cascella.
+                            I colori sono sbiaditi a causa probabilmente dell'usura del tempo, che si nota molto anche nei bordi della cartolina e nel retro, tuttavia l'immagine risulta ancora nitida e non troppo rovinata in quanto si riescono a distinguere i vari elementi del paesaggio.
+                        Troviamo infatti al centro il fiume Adige con ai lati due pareti montouse che si innalzano; sulla destra si può notare una carovana che si sta spostando verso i ponti per attraversare il corso d'acqua.
+                    </figDesc>
+                        <head>L'Adige (verso Chizzola) - Tommaso Cascella</head>
+                    </figure>
+                </div>
+                <div xml:id="retrocart" facs="#retro17" type="retro">
+                    <figure>
+                        <graphic xml:id="retroimg" url="./cartoline/7694-017R.jpg " />
+                    </figure>
+                    <div xml:id="lato_sinistro" facs="#ls">
+                        <div facs="#altosx" type="code">
+                            <p>
+                                <num type="cardinal">
+                                    <idno> 17 </idno>
+                                </num>
+                                <stamp type="mark">
+                                    <unclear reason="faded">
+    
+                                        <note>Sotto al numero 17 compare un timbro illeggibile, probabilmente della croce rossa, dato che sembra intravedersi un simbolo simile</note>
+                                    </unclear>
+                                </stamp>
+                            </p>
+                        </div>
+                        <div facs="#msg" type="message">
+                            <p>
+                                <date type="writing">
+                                    <num>16</num>
+                                    <pc>-</pc>
+                                    <num>9</num>
+                                    <pc>-</pc>
+                                    <num>
+                                        191
+                                        <unclear reason="illegible">
+                                            <num>
+                                                <note>Non si legge l'ultimo numero della data</note>
+                                            </num>
+                                        </unclear>
+                                    </num>
+                                </date>
+                                <lb />
+                                <w>Riceva</w>
+                                <w>tanti</w>
+                                <lb />
+                                <w>saluti</w>
+                                <w>a</w>
+                                <w>lei</w>
+                                <lb />
+                                <w>e</w>
+                                <w>famiglia</w>
+                                <lb />
+                                <w>Soldato</w>
+                                <w>Benelli</w>
+                                <lb />
+                                <w>Romeo</w>
+                                <w>Infermeria</w>
+                                <lb />
+                                <unclear reason="illegible">
+                                    <w>
+                                        <note>Viene riportato dal mittente il nome di una qualche localita, probabilmente quella dell'infermeria da cui sta spedendo</note>
+                                    </w>
+                                </unclear>
+                                <lb />
+                                <abbr type="suspension">
+                                    Prov
+                                    <pc>.</pc>
+                                </abbr>
+                                <placeName>
+                                    <w>Udine</w>
+                                </placeName>
+                            </p>
+                        </div>
+                        <div facs='#artist'>
+                            <p>Riferimento alla proprietà e/o al titolo dell' opera</p>
+                        </div>
+                    </div>
+                    <div xml:id="lato_destro" facs="#ld">
+                        <div facs='#altodx'>
+                            <p>
+                                <w>Cartolina</w>
+                                <w>Postale</w>
+                                <w>Commemorativa</w>
+                                <lb />
+                                <w>Della</w>
+                                <unclear reason="illegible">
+                                    <note>La scritta è sovrastata dal timbro</note>
+                                </unclear>
+                                <w>l</w>
+                                <pc>'</pc>
+                                <w>indipendenza</w>
+                                <unclear>
+                                    <w>
+                                        <note>Ultima parola non leggibile perchè coperta dal timbro</note>
+                                    </w>
+                                </unclear>
+                            </p>
+                            <div type="marks">
+                                <p>
+                                    <!-- stamps -->
+                                    <stamp type="postmark">
+                                        <date type="writing" when="1915-09-16">
+                                            <num>16</num>
+                                            <abbr type="contraction">
+                                                Sett
+                                                <pc>.</pc>
+                                            </abbr>
+                                            <num>15</num>
+                                        </date>
+                                    </stamp>
+                                    <phr>
+                                        <lb />
+                                        <w>Edizione</w>
+                                        <lb />
+                                        <w>della</w>
+                                        <lb />
+                                        <w>Croce</w>
+                                        <w>Rossa</w>
+                                        <w>Italiana</w>
+                                        <lb />
+                                        <w>a</w>
+                                        <w>proprio</w>
+                                        <lb />
+                                        <distinct type="latin">
+                                            <w>esclvsivo</w>
+                                        </distinct>
+                                        <lb />
+                                        <w>beneficio</w>
+                                    </phr>
+    
+                                    <stamp type="postmark">
+                                        <unclear reason="faded">
+                                            <note>Il timbro risulta parecchio sbiadito, quasi cancellato del tutto, soprattutto la zona sopra al francobollo è completamente cancellata</note>
+                                        </unclear>
+                                    </stamp>
+    
+                                    <figure type="logo">
+                                        <figDesc>
+                                        Si distingue nitidamente il logo della croce rossa
+                                        </figDesc>
+                                    </figure>
+                                    <stamp type="postage">Francobollo da 5 centesimi del Regno d'Italia</stamp>
+                                </p>
+                            </div>
+                        </div>
+                        <div facs="#ricevente" type="destination">
+                            <p>
+                                <w>Al</w>
+                                <abbr type="title">Signor</abbr>
+                                <lb />
+                                <address>
+                                    <addrLine>
+                                        <persName>
+                                            <surname>Turtura</surname>
+                                            <forename>Giuseppe</forename>
+                                        </persName>
+                                    </addrLine>
+                                    <lb />
+                                    <street>
+                                        <w>Via</w>
+                                        <w>Girolamo</w>
+                                        <w>Rossi</w>
+                                    </street>
+                                    <lb />
+                                    <addrLine>
+                                        <roleName>
+                                            <w>Capo</w>
+                                            <w>Mastro</w>
+                                            <w>Muratore</w>
+                                        </roleName>
+                                        <placeName>Ravenna</placeName>
+                                    </addrLine>
+                                </address>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+            </body>
+        </text>
+        <facsimile>
+            <!--retro-->
+            <surface type="retro">
+                <graphic url='cartoline/7694-017R.jpg' width='1642px' height='1055px' />
+                <!-- Lato destro -->
+                <zone xml:id="altodx" ulx="674" uly="193" lrx="1622" lry="582">
+                    <graphic url='./cartoline/zone/17-altodx.jpg' />
+                </zone>
+                <zone xml:id="ricevente" ulx="676" uly="593" lrx="1621" lry="1041">
+                    <graphic url='./cartoline/zone/17-ricevente.jpg' />
+                </zone>
+                <!-- Lato sinistro -->
+                <zone xml:id="altosx" ulx="11" uly="9" lrx="325" lry="300">
+                    <graphic url='./cartoline/zone/17-altosx.jpg' />
+                </zone>
+                <zone xml:id="msg" ulx="113" uly="20" lrx="666" lry="802">
+                    <graphic url='./cartoline/zone/17-msg.jpg' />
+                </zone>
+                <zone xml:id="artist" ulx="25" uly="939" lrx="628" lry="1021">
+                    <graphic url='./cartoline/zone/17-artist.jpg' />
+                </zone>
+            </surface>
+        </facsimile>
+    </TEI>
+</teiCorpus>

@@ -76,7 +76,7 @@
                 <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='fronteimg']" />
             </div>
             <div class="col-lg-6 col-md-12">
-                <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='frontecart']" />
+                <xsl:apply-templates select="//tei:text/tei:body/tei:div[@type='fronte']" />
             </div>
         </div>
         <div class="row mt-3">
@@ -525,6 +525,12 @@
                 <xsl:value-of select="tei:note" />
                 ]
             </p>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="tei:teiCorpus">
+        <xsl:for-each select="tei:TEI">
+            <xsl:apply-templates />
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
