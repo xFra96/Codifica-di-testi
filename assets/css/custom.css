@@ -43,9 +43,9 @@ section {
     background-position: center;
 }
 
-#cart17, #cart18, #cart39 {
+/*#cart17, #cart18, #cart39 {
     display: none;
-}
+}/*
 
 @media screen and (max-width:600px) {
     .main-wrapper {

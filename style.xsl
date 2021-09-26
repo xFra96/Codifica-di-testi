@@ -20,43 +20,31 @@
                 <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
-                <div id="loading"></div>
                 <div class="main-wrapper page shadow">
-                    <div class="container-lg">
-                        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                            <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                            HOME
-                        </a>
-                            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart017.xml">Cartolina 17</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart018.xml">Cartolina 18</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart039.xml">Cartolina 39</a>
-                                </li>
-                            </ul>
-                            <div class="col-md-3 text-end">
-                                <a href="https://github.com/xFra96/CDT" target="_blank" class="btn btn-outline-primary me-2">GitHub Repo</a>
+                    <header>
+                        <div class="container border-bottom">
+                            <div class="row pb-4">
+                                <div class="col-10">
+                                    <ul class="nav mb-2 justify-content-center mb-md-0 nav nav-pills">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart17">Cartolina 17</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart18">Cartolina 18</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart39">Cartolina 39</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <a href="https://github.com/xFra96/CDT" target="_blank" class="text-center btn btn-outline-primary me-2">GitHub Repo</a>
+                                </div>
                             </div>
-                        </header>
-                    </div>
+                        </div>
+                    </header>
+                    <xsl:apply-templates select="tei:teiCorpus" />
                     <section>
-                        <div class="container-lg">
-                            <xsl:apply-templates select="//tei:teiHeader" />
-                        </div>
-                    </section>
-                    <section>
-                        <div class="container-lg">
-                            <xsl:if test="//tei:TEI[@xml:id='cart39' or @xml:id='cart17' or @xml:id='cart18']">
-                                <xsl:call-template name="renderInfoCartolina" />
-                            </xsl:if>
-                        </div>
-                        <div class="container-lg">
-                            <xsl:apply-templates select="//tei:text[@type='cartolina']" />
-                        </div>
                         <div class="container-lg">
                             <xsl:call-template name="renderInfoProgetto" />
                         </div>
@@ -89,9 +77,18 @@
         </div>
     </xsl:template>
 
+    <!-- Info Cartolina -->
+    <xsl:template name="tei:TEI">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <xsl:apply-templates select="tei:header" />
+            </div>
+        </div>
+    </xsl:template>
+
     <!-- TEI Header -->
     <xsl:template match="tei:teiHeader">
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-md-12 text-center">
                 <h1>
                     <i>
@@ -103,17 +100,14 @@
                 </h6>
             </div>
         </div>
-    </xsl:template>
-
-    <!-- Info Cartolina -->
-    <xsl:template name="renderInfoCartolina">
-        <div class="row mb-5">
+        <div class="row my-5">
             <div class="col-md-12">
                 <h4 class="text-center mb-5">Info cartolina</h4>
-                <xsl:apply-templates select="//tei:fileDesc/tei:sourceDesc" />
+                <xsl:apply-templates select="tei:fileDesc/tei:sourceDesc" />
             </div>
         </div>
     </xsl:template>
+
 
     <!-- Info Progetto -->
     <xsl:template name="renderInfoProgetto">
@@ -217,7 +211,7 @@
     </xsl:template>
 
     <!-- Rendering Source Desc -->
-    <xsl:template match="tei:fileDesc/tei:sourceDesc">
+    <xsl:template match="tei:sourceDesc">
         <div class="card">
             <table class=" mb-0 table table-striped table-hover">
                 <tbody>
@@ -226,9 +220,9 @@
                             <b>Luogo dove è conservata:</b>
                         </td>
                         <td>
-                            <xsl:value-of select="//tei:repository" />
+                            <xsl:value-of select="tei:msDesc/tei:msIdentifier/tei:repository" />
                             ,
-                            <xsl:value-of select="//tei:settlement" />
+                            <xsl:value-of select="tei:msDesc/tei:msIdentifier/tei:settlement" />
                         </td>
                     </tr>
 
@@ -349,7 +343,7 @@
     </xsl:template>
 
     <!-- Retro Text -->
-    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
+    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='retro']">
         <div class="container">
             <div class="accordion accordion-flush" id="accordionGroup">
                 <div class="row p-2">
@@ -530,7 +524,11 @@
 
     <xsl:template match="tei:teiCorpus">
         <xsl:for-each select="tei:TEI">
-            <xsl:apply-templates />
+            <section id="{@xml:id}">
+                <div class="container">
+                    <xsl:apply-templates select="." />
+                </div>
+            </section>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
