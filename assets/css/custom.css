@@ -43,9 +43,17 @@ section {
     background-position: center;
 }
 
-/*#cart17, #cart18, #cart39 {
+#toTop {
+    position: fixed;
+    bottom: 20;
+    right: 20;
+    font-size: 40px;
     display: none;
-}/*
+}
+
+#cart18, #cart39 {
+    display: none;
+}
 
 @media screen and (max-width:600px) {
     .main-wrapper {

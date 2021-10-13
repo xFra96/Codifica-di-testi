@@ -10,7 +10,7 @@
                 <!-- TRASCRITTORE nome e cognome-->
                 <respStmt>
                     <resp>Conversione TEI P5 a cura di</resp>
-                    <name xml:id="FS">
+                    <name >
                         <forename>Francesco</forename>
                         <surname>Spagnoli</surname>
                     </name>
@@ -18,7 +18,7 @@
                 <!-- ENTE DI APPARTENENZA -->
                 <respStmt>
                     <resp>Ente di Appartenenza</resp>
-                    <name type="comune" xml:id="SP">Comune della Spezia</name>
+                    <name type="comune">Comune della Spezia</name>
                 </respStmt>
             </titleStmt>
             <editionStmt>
@@ -31,7 +31,7 @@
                 <!-- NOME COMPILATORE -->
                 <respStmt>
                     <resp>encoding by</resp>
-                    <name xml:id="TC">Tommaso Castagneto</name>
+                    <name>Tommaso Castagneto</name>
                     <name>Francesco Spagnoli</name>
                 </respStmt>
                 <!-- REFERENTE SCIENTIFICO sempre Nome Cognome, XY2 è sempre Tommaso Castagneto, XZ1 è chi interviene sulla schedatura già fatta per correzioni e aggiunte-->
@@ -42,12 +42,12 @@
                 </respStmt>
                 <respStmt>
                     <resp>Responsabile scientifico</resp>
-                    <name xml:id="GP">Giacomo Paolicchi</name>
-                    <name xml:id="ES">Enrica Salvatori</name>
+                    <name>Giacomo Paolicchi</name>
+                    <name>Enrica Salvatori</name>
                 </respStmt>
                 <respStmt>
                     <resp>Funzionario responsabile</resp>
-                    <name xml:id="MR">Marzia Ratti</name>
+                    <name>Marzia Ratti</name>
                 </respStmt>
             </editionStmt>
             <publicationStmt>
@@ -68,9 +68,9 @@
                     <!-- TITOLO Quello che si ricava dalla cartolina; Se un documento composto da immagini 
                         non presenta un titolo o altri elementi considerabili come titolo, si formula un titolo sintetico 
                         registrandolo entro parentesi quadre [Venere al bagno] ma indicando dentro la codifica come qui sotto esemplificato-->
-                    <title xml:id="tit1">Avanscoperta (dall'altipiano carsico)</title>
+                    <title>Avanscoperta (dall'altipiano carsico)</title>
                     <author>Tommaso Cascella</author>
-                    <publisher xml:id="CR">Croce Rossa Italiana</publisher>
+                    <publisher>Croce Rossa Italiana</publisher>
                     <!-- CRONOLOGIA, attenzione si riferisce solo alla data di stampa -->
                     <date when="1915">1915</date>
                 </bibl>
@@ -195,21 +195,21 @@
 
     </teiHeader>
     <!-- DEFINIZIONE -->
-    <text type="cartolina" xml:id="cart018">
+    <text type="cartolina">
         <!-- TRASCRIZIONE -->
         <body>
-            <div xml:id="frontecart" type="fronte">
+            <div type="fronte">
                 <figure>
-                    <graphic xml:id="fronteimg" url="./cartoline/7694-018F.jpg" />
+                    <graphic facs="fronteimg" url="./cartoline/7694-018F.jpg" />
                     <figDesc>Sono rappresentati due soldati di spalle, uno a cavallo e uno a terra che, con una mano, tiene le briglie mentre con l' altra regge probabilmente un binocolo nel tentativo di scorgere la vallata che si para davanti</figDesc>
                     <head>Avanscoperta (dall'altipiano carsico)</head>
                 </figure>
             </div>
-            <div xml:id="retrocart" facs="#retro18" type="retro">
+            <div facs="retrocart" type="retro">
                 <figure>
-                    <graphic xml:id="retroimg" url="./cartoline/7694-018R.jpg" />
+                    <graphic facs="retroimg" url="./cartoline/7694-018R.jpg" />
                 </figure>
-                <div xml:id="lato_sinistro" facs="#ls">
+                <div facs="lato_sinistro" facs="#ls">
                     <div facs="#altosx" type="code">
                         <p>
                             <num type="cardinal">
@@ -251,7 +251,7 @@
                         <p>Riferimento alla proprietà e/o al titolo dell' opera</p>
                     </div>
                 </div>
-                <div xml:id="lato_destro">
+                <div facs="lato_destro">
                     <div facs="#altodx">
                         <p>
                             <w>Cartolina</w>
@@ -346,20 +346,20 @@
         <surface type="retro">
             <graphic url='cartoline/7694-018R.jpg' width='1646px' height='1043px' />
             <!-- Lato destro -->
-            <zone xml:id="altodx" points='651,580 1633,588 1626,11 663,16'>
+            <zone facs="altodx" points='651,580 1633,588 1626,11 663,16'>
                 <graphic url='./cartoline/zone/18-altodx.jpg' />
             </zone>
-            <zone xml:id="ricevente" points='546,579 497,1039 1634,1034 1604,556'>
+            <zone facs="ricevente" points='546,579 497,1039 1634,1034 1604,556'>
                 <graphic url='./cartoline/zone/18-ricevente.jpg' />
             </zone>
             <!-- Lato sinistro -->
-            <zone xml:id="altosx" points='6,11 12,353 654,317 668,6'>
+            <zone facs="altosx" points='6,11 12,353 654,317 668,6'>
                 <graphic url='./cartoline/zone/18-altosx.jpg' />
             </zone>
-            <zone xml:id="msg" points='597,899 4,906 7,309 640,303'>
+            <zone facs="msg" points='597,899 4,906 7,309 640,303'>
                 <graphic url='./cartoline/zone/18-msg.jpg' />
             </zone>
-            <zone xml:id="artist" points='52,900 642,892 631,973 56,969'>
+            <zone facs="artist" points='52,900 642,892 631,973 56,969'>
                 <graphic url='./cartoline/zone/18-artist.jpg' />
             </zone>
         </surface>
