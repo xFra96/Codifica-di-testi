@@ -12,7 +12,7 @@
                 <meta name="author" content="Francesco Spagnoli" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>
-                    <xsl:value-of select="//tei:fileDesc/tei:titleStmt/tei:title" />
+                    Progetto di codifica di testi
                 </title>
                 <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
                 <link href="./assets/css/FA-all.css" rel="stylesheet" type="text/css" />
@@ -20,48 +20,39 @@
                 <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
             </head>
             <body>
-                <div id="loading"></div>
                 <div class="main-wrapper page shadow">
-                    <div class="container-lg">
-                        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                            <a href="./main.xml" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                            HOME
-                        </a>
-                            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart017.xml">Cartolina 17</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart018.xml">Cartolina 18</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 link-dark" href="./cart039.xml">Cartolina 39</a>
-                                </li>
-                            </ul>
-                            <div class="col-md-3 text-end">
-                                <a href="https://github.com/xFra96/CDT" target="_blank" class="btn btn-outline-primary me-2">GitHub Repo</a>
+                    <header>
+                        <div class="container border-bottom">
+                            <div class="row pb-4">
+                                <div class="col-lg-8 col-sm-12 offset-lg-2">
+                                    <ul class="nav mb-2 justify-content-center mb-md-0 nav nav-pills">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart17">Cartolina 17</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart18">Cartolina 18</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart39">Cartolina 39</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-sm-12 text-center">
+                                    <a href="https://github.com/xFra96/CDT" target="_blank" class="text-center btn btn-outline-primary me-2">GitHub Repo</a>
+                                </div>
                             </div>
-                        </header>
-                    </div>
-                    <section>
-                        <div class="container-lg">
-                            <xsl:apply-templates select="//tei:teiHeader" />
                         </div>
+                    </header>
+                    <section>
+                        <xsl:apply-templates select="tei:teiCorpus" />
                     </section>
                     <section>
-                        <div class="container-lg">
-                            <xsl:if test="//tei:TEI[@xml:id='cart39' or @xml:id='cart17' or @xml:id='cart18']">
-                                <xsl:call-template name="renderInfoCartolina" />
-                            </xsl:if>
-                        </div>
-                        <div class="container-lg">
-                            <xsl:apply-templates select="//tei:text[@type='cartolina']" />
-                        </div>
-                        <div class="container-lg">
-                            <xsl:call-template name="renderInfoProgetto" />
-                        </div>
+                        <xsl:call-template name="renderInfoProgetto" />
                     </section>
                 </div>
+                <a id="toTop" href="#">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
             </body>
             <script src="./assets/js/bootstrap.bundle.min.js"></script>
             <script src="./assets/js/lightbox-plus-jquery.js"></script>
@@ -70,28 +61,37 @@
     </xsl:template>
 
     <!-- MAIN STRUCTURE  -->
-    <xsl:template match="tei:text[@type='cartolina']">
+    <xsl:template match="tei:text[@type='cartolina']/tei:body">
         <div class="row mt-3">
-            <div class="col-lg-6 col-md-12">
-                <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='fronteimg']" />
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='frontecart']" />
-            </div>
+            <xsl:apply-templates select="tei:div[@type=fronte]" />
         </div>
         <div class="row mt-3">
             <div class="col-lg-12 col-md-12">
-                <xsl:apply-templates select="//tei:figure/tei:graphic[@xml:id='retroimg']" />
+                <xsl:apply-templates select="tei:figure/tei:graphic[@xml:id='retroimg']" />
             </div>
             <div class="col-lg-12 col-md-12">
-                <xsl:apply-templates select="//tei:text/tei:body/tei:div[@xml:id='retrocart']" />
+                <xsl:apply-templates select="tei:text/tei:body/tei:div[@xml:id='retrocart']" />
+            </div>
+        </div>
+    </xsl:template>
+
+    <!-- Info Cartolina -->
+    <xsl:template name="tei:TEI">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <xsl:apply-templates select="tei:header" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <xsl:apply-templates select="tei:text" />
             </div>
         </div>
     </xsl:template>
 
     <!-- TEI Header -->
     <xsl:template match="tei:teiHeader">
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-md-12 text-center">
                 <h1>
                     <i>
@@ -103,113 +103,112 @@
                 </h6>
             </div>
         </div>
-    </xsl:template>
-
-    <!-- Info Cartolina -->
-    <xsl:template name="renderInfoCartolina">
-        <div class="row mb-5">
+        <div class="row my-5">
             <div class="col-md-12">
                 <h4 class="text-center mb-5">Info cartolina</h4>
-                <xsl:apply-templates select="//tei:fileDesc/tei:sourceDesc" />
+                <xsl:apply-templates select="tei:fileDesc/tei:sourceDesc" />
             </div>
         </div>
     </xsl:template>
 
+
     <!-- Info Progetto -->
     <xsl:template name="renderInfoProgetto">
-        <div class="row pt-5">
-            <div class="col-md-12 pb-4">
-                <h4 class="text-center mb-5">Info progetto</h4>
-                <div class="card card-body">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <b>Ente di appartenenza:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:name[@xml:id='SP']" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Encoding by:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:name[@xml:id='FS']" />
-                                    -
-                                    <xsl:value-of select="//tei:name[@xml:id='TC']" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Compilatore:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:name[@xml:id='FS']" />
-                                    -
-                                    <xsl:value-of select="//tei:name[@xml:id='TC']" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Responsabile scientifico:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:name[@xml:id='GP']" />
-                                    -
-                                    <xsl:value-of select="//tei:name[@xml:id='ES']" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Funzionario responsabile:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:name[@xml:id='MR']" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <b>Note non rilevanti ai fini della codifica:</b>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="//tei:notesStmt[@xml:id='notesStmt1']" />
-                                </td>
+        <div class="container-lg">
+            <div class="row pt-5">
+                <div class="col-md-12 pb-4">
+                    <h4 class="text-center mb-5">Info progetto</h4>
+                    <div class="card card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <b>Ente di appartenenza:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:name[@xml:id='SP']" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Encoding by:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:name[@xml:id='FS']" />
+                                        -
+                                        <xsl:value-of select="tei:name[@xml:id='TC']" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Compilatore:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:name[@xml:id='FS']" />
+                                        -
+                                        <xsl:value-of select="tei:name[@xml:id='TC']" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Responsabile scientifico:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:name[@xml:id='GP']" />
+                                        -
+                                        <xsl:value-of select="tei:name[@xml:id='ES']" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Funzionario responsabile:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:name[@xml:id='MR']" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Note non rilevanti ai fini della codifica:</b>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="tei:notesStmt[@xml:id='notesStmt1']" />
+                                    </td>
 
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="text-center w-100">
-                        <p>
-                            <b>Legenda simboli:</b>
-                        </p>
-                        <p>
-                            <span class="mx-2">
-                                <i class="fas fa-stamp"></i>
-                                - Timbri
-                            </span>
-                            <span class="mx-2">
-                                <i class="fas fa-file-image"></i>
-                                - Immagine/Logo
-                            </span>
-                            <span class="mx-2">
-                                <i class="fas fa-sticky-note"></i>
-                                - Nota/Commento
-                            </span>
-                        </p>
-                        <p>
-                            ©
-                            <xsl:value-of select="//tei:publicationStmt/tei:date" />
-                            <i>
-                                <xsl:value-of select="//tei:publicationStmt/tei:availability" />
-                                -
-                                <xsl:value-of select="//tei:publicationStmt/tei:distributor" />
-                                ,
-                                <xsl:value-of select="//tei:publicationStmt/tei:address" />
-                                <xsl:value-of select="//tei:publicationStmt/tei:address/tei:addrline[1]" />
-                            </i>
-                        </p>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-center w-100">
+                            <p>
+                                <b>Legenda simboli:</b>
+                            </p>
+                            <p>
+                                <span class="mx-2">
+                                    <i class="fas fa-stamp"></i>
+                                    - Timbri
+                                </span>
+                                <span class="mx-2">
+                                    <i class="fas fa-file-image"></i>
+                                    - Immagine/Logo
+                                </span>
+                                <span class="mx-2">
+                                    <i class="fas fa-sticky-note"></i>
+                                    - Nota/Commento
+                                </span>
+                            </p>
+                            <p>
+                                ©
+                                <xsl:value-of select="tei:publicationStmt/tei:date" />
+                                <i>
+                                    <xsl:value-of select="tei:publicationStmt/tei:availability" />
+                                    -
+                                    <xsl:value-of select="tei:publicationStmt/tei:distributor" />
+                                    ,
+                                    <xsl:value-of select="tei:publicationStmt/tei:address" />
+                                    <xsl:value-of select="tei:publicationStmt/tei:address/tei:addrline[1]" />
+                                </i>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,7 +216,7 @@
     </xsl:template>
 
     <!-- Rendering Source Desc -->
-    <xsl:template match="tei:fileDesc/tei:sourceDesc">
+    <xsl:template match="tei:sourceDesc">
         <div class="card">
             <table class=" mb-0 table table-striped table-hover">
                 <tbody>
@@ -226,9 +225,9 @@
                             <b>Luogo dove è conservata:</b>
                         </td>
                         <td>
-                            <xsl:value-of select="//tei:repository" />
+                            <xsl:value-of select="tei:msDesc/tei:msIdentifier/tei:repository" />
                             ,
-                            <xsl:value-of select="//tei:settlement" />
+                            <xsl:value-of select="tei:msDesc/tei:msIdentifier/tei:settlement" />
                         </td>
                     </tr>
 
@@ -325,31 +324,50 @@
     </xsl:template>
 
     <!-- Immagine fronte e retro -->
-    <xsl:template match="tei:graphic">
-        <a href="{@url}" data-lightbox="cartolina">
-            <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{@url}" />
-        </a>
+    <xsl:template match="tei:figure">
+        <xsl:choose>
+            <xsl:when test="@type ='retroimg' or @type='fronteimg'">
+                <a href="{tei:graphic/@url}" data-lightbox="cartolina">
+                    <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{tei:graphic/@url}" />
+                </a>
+            </xsl:when>
+            <xsl:when test="@type ='zone'">
+                <a href="{tei:graphic/@url}" data-lightbox="zona">
+                    <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{tei:graphic/@url}" />
+                </a>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="tei:zone/tei:graphic">
-        <a href="{@url}" data-lightbox="zona">
-            <img class="cartolina img-fluid shadow p-3 mb-5 bg-img rounded" src="{@url}" />
-        </a>
+    <xsl:template match="tei:text">
+        <div class="row">
+            <xsl:apply-templates select="tei:body/tei:div[@type='fronte']" />
+        </div>
+        <div class="row">
+            <xsl:apply-templates select="tei:body/tei:div[@type='retro']" />
+        </div>
     </xsl:template>
 
     <!-- Front Text -->
-    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@type='fronte']">
-        <div class="px-3 py-2">
-            <h4>Descrizione</h4>
-            <p>
-                <xsl:value-of select="//tei:figure/tei:figDesc" />
-            </p>
+    <xsl:template match="tei:div[@type='fronte']">
+        <div class="col-lg-6 col-md-12">
+            <xsl:apply-templates select="tei:figure" />
         </div>
-
+        <div class="col-lg-6 col-md-12">
+            <div class="px-3 py-2">
+                <h4>Descrizione</h4>
+                <p>
+                    <xsl:value-of select="tei:figure/tei:figDesc" />
+                </p>
+            </div>
+        </div>
     </xsl:template>
 
     <!-- Retro Text -->
-    <xsl:template match="tei:text[@type='cartolina']/tei:body/tei:div[@xml:id='retrocart']">
+    <xsl:template match="tei:div[@type='retro']">
+        <div class="col-md-12 p-3">
+            <xsl:apply-templates select="tei:figure" />
+        </div>
         <div class="container">
             <div class="accordion accordion-flush" id="accordionGroup">
                 <div class="row p-2">
@@ -363,11 +381,11 @@
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:zone[@xml:id='altosx']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='code']/tei:figure" />
                                         </div>
                                         <div class="col-lg-6">
                                             <p>
-                                                <xsl:apply-templates select="//tei:div/tei:div[@facs='#altosx']" />
+                                                <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='code']/tei:p" />
                                             </p>
                                         </div>
                                     </div>
@@ -382,11 +400,11 @@
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:zone[@xml:id='msg']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='message']/tei:figure" />
                                         </div>
                                         <div class="col-lg-6">
                                             <p>
-                                                <xsl:apply-templates select="//tei:div/tei:div[@type='message']" />
+                                                <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='message']/tei:p" />
                                             </p>
                                         </div>
                                     </div>
@@ -401,10 +419,10 @@
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:zone[@xml:id='artist']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='artist_signature']/tei:figure" />
                                         </div>
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:div[@facs='#artist']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_sinistro']/tei:div[@type='artist_signature']/tei:p" />
                                         </div>
                                     </div>
                                 </div>
@@ -421,11 +439,11 @@
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:zone[@xml:id='altodx']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_destro']/tei:div[@type='altodx']/tei:figure" />
                                         </div>
                                         <div class="col-lg-6">
                                             <p>
-                                                <xsl:apply-templates select="//tei:div[@facs='#altodx']" />
+                                                <xsl:apply-templates select="tei:div[@type='lato_destro']/tei:div[@type='altodx']/tei:p" />
                                             </p>
                                         </div>
                                     </div>
@@ -440,11 +458,11 @@
                                 <div class="accordion-body container">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <xsl:apply-templates select="//tei:zone[@xml:id='ricevente']" />
+                                            <xsl:apply-templates select="tei:div[@type='lato_destro']/tei:div[@type='destination']/tei:figure" />
                                         </div>
                                         <div class="col-lg-6">
                                             <p>
-                                                <xsl:apply-templates select="//tei:div/tei:div[@type='destination']" />
+                                                <xsl:apply-templates select="tei:div[@type='lato_destro']/tei:div[@type='destination']/tei:p" />
                                             </p>
                                         </div>
                                     </div>
@@ -525,6 +543,16 @@
                 <xsl:value-of select="tei:note" />
                 ]
             </p>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="tei:teiCorpus">
+        <xsl:for-each select="tei:TEI">
+            <div class='tei' id="{@xml:id}">
+                <div class="container">
+                    <xsl:apply-templates select="." />
+                </div>
+            </div>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>

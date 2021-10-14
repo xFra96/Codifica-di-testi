@@ -3,31 +3,36 @@ let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
 
-const wait = (delay = 0) =>
-  new Promise(resolve => setTimeout(resolve, delay));
+$(document).ready(function () {
+  $("#toTop").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
 
-const setVisible = (elementOrSelector, visible) =>
-  (typeof elementOrSelector === 'string'
-    ? document.querySelector(elementOrSelector)
-    : elementOrSelector
-  ).style.display = visible ? 'block' : 'none';
-setVisible('.page', false);
-setVisible('#loading', true);
+  $('.toggler').on("click", function () {
+    $(".toggler").removeClass("active");
+    $(this).addClass("active");
+    $(".tei").hide();
+    let divtoshow = $(this).data('section')
+    $('#' + divtoshow).show();
+  });
+});
 
-document.addEventListener('DOMContentLoaded', () => {
-  wait(300).then(() => {
-    setVisible('.page', true);
-    setVisible('#loading', false);
-  })
-  const togglers = document.querySelectorAll('.toggler')
-  for (let i = 0; i < togglers.length; i++) {
-    togglers[i].addEventListener("click", function () {
-      let divtoshow = togglers[i].attributes.getNamedItem("data-section").value
-      setVisible('#cart17', false);
-      setVisible('#cart18', false);
-      setVisible('#cart39', false);
-      setVisible('#home', false);
-      setVisible('#' + divtoshow, true);
-    });
+$(document).scroll(function () {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    var y = $(this).scrollTop();
+    if (y > 150) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
   }
 });
