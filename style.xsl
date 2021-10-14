@@ -24,7 +24,7 @@
                     <header>
                         <div class="container border-bottom">
                             <div class="row pb-4">
-                                <div class="col-8 offset-2">
+                                <div class="col-lg-8 col-sm-12 offset-lg-2">
                                     <ul class="nav mb-2 justify-content-center mb-md-0 nav nav-pills">
                                         <li class="nav-item">
                                             <a class="nav-link px-2 link-dark toggler" href="#" data-section="cart17">Cartolina 17</a>
@@ -37,7 +37,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-lg-2 col-sm-12 text-center">
                                     <a href="https://github.com/xFra96/CDT" target="_blank" class="text-center btn btn-outline-primary me-2">GitHub Repo</a>
                                 </div>
                             </div>
@@ -49,8 +49,10 @@
                     <section>
                         <xsl:call-template name="renderInfoProgetto" />
                     </section>
-                    <a id="toTop" href="#"><i class="fas fa-arrow-circle-up"></i></a>
                 </div>
+                <a id="toTop" href="#">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
             </body>
             <script src="./assets/js/bootstrap.bundle.min.js"></script>
             <script src="./assets/js/lightbox-plus-jquery.js"></script>
@@ -546,11 +548,11 @@
 
     <xsl:template match="tei:teiCorpus">
         <xsl:for-each select="tei:TEI">
-            <section id="{@xml:id}">
+            <div class='tei' id="{@xml:id}">
                 <div class="container">
                     <xsl:apply-templates select="." />
                 </div>
-            </section>
+            </div>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>

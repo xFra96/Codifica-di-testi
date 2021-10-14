@@ -17,8 +17,6 @@ section {
 
 .main-wrapper {
     width: fit-content;
-    margin: auto;
-    width: fit-content;
     margin: 30px auto;
     border-radius: 35px;
     background-color: white;
@@ -45,10 +43,12 @@ section {
 
 #toTop {
     position: fixed;
-    bottom: 20;
-    right: 20;
-    font-size: 40px;
+    bottom: 15;
+    right: 15;
+    font-size: 50px;
     display: none;
+    background-color: white;
+    border-radius: 100%;
 }
 
 #cart18, #cart39 {
@@ -58,5 +58,7 @@ section {
 @media screen and (max-width:600px) {
     .main-wrapper {
         padding: 0px;
+        border-radius: 0px;
+        margin: 0px;
     }
 }
