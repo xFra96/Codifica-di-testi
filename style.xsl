@@ -27,7 +27,7 @@
                                 <div class="col-lg-8 col-sm-12 offset-lg-2">
                                     <ul class="nav mb-2 justify-content-center mb-md-0 nav nav-pills">
                                         <li class="nav-item">
-                                            <a class="nav-link mx-3 px-3 link-dark toggler" href="#" data-section="cart17">Cartolina 17</a>
+                                            <a class="nav-link mx-3 px-3 link-dark toggler active" href="#" data-section="cart17">Cartolina 17</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link mx-3 px-3 link-dark toggler" href="#" data-section="cart18">Cartolina 18</a>
