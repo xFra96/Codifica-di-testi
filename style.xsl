@@ -126,7 +126,7 @@
                                         <b>Ente di appartenenza:</b>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="tei:name[@xml:id='SP']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='SP']" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -134,9 +134,9 @@
                                         <b>Encoding by:</b>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="tei:name[@xml:id='FS']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='FS']" />
                                         -
-                                        <xsl:value-of select="tei:name[@xml:id='TC']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='TC']" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -144,9 +144,9 @@
                                         <b>Compilatore:</b>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="tei:name[@xml:id='FS']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='FS']" />
                                         -
-                                        <xsl:value-of select="tei:name[@xml:id='TC']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='TC']" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -154,9 +154,9 @@
                                         <b>Responsabile scientifico:</b>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="tei:name[@xml:id='GP']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='GP']" />
                                         -
-                                        <xsl:value-of select="tei:name[@xml:id='ES']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='ES']" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -164,17 +164,8 @@
                                         <b>Funzionario responsabile:</b>
                                     </td>
                                     <td>
-                                        <xsl:value-of select="tei:name[@xml:id='MR']" />
+                                        <xsl:value-of select="//tei:name[@xml:id='MR']" />
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <b>Note non rilevanti ai fini della codifica:</b>
-                                    </td>
-                                    <td>
-                                        <xsl:value-of select="tei:notesStmt[@xml:id='notesStmt1']" />
-                                    </td>
-
                                 </tr>
                             </tbody>
                         </table>
@@ -198,14 +189,14 @@
                             </p>
                             <p>
                                 ©
-                                <xsl:value-of select="tei:publicationStmt/tei:date" />
+                                <xsl:value-of select="//tei:publicationStmt/tei:date" />
                                 <i>
-                                    <xsl:value-of select="tei:publicationStmt/tei:availability" />
+                                    <xsl:value-of select="//tei:publicationStmt/tei:availability" />
                                     -
-                                    <xsl:value-of select="tei:publicationStmt/tei:distributor" />
+                                    <xsl:value-of select="//tei:publicationStmt/tei:distributor" />
                                     ,
-                                    <xsl:value-of select="tei:publicationStmt/tei:address" />
-                                    <xsl:value-of select="tei:publicationStmt/tei:address/tei:addrline[1]" />
+                                    <xsl:value-of select="//tei:publicationStmt/tei:address" />
+                                    <xsl:value-of select="//tei:publicationStmt/tei:address/tei:addrline[1]" />
                                 </i>
                             </p>
                         </div>
@@ -317,6 +308,15 @@
                         <td>
                             <xsl:apply-templates select="tei:listPerson" />
                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Note non rilevanti ai fini della codifica:</b>
+                        </td>
+                        <td>
+                            <xsl:value-of select="../tei:notesStmt" />
+                        </td>
+
                     </tr>
                 </tbody>
             </table>
